@@ -8,5 +8,4 @@ license       = "MIT or Apache License 2.0"
 requires "nim"
 requires "puppy"
 requires "web3"
-
-
+requires "jester"
