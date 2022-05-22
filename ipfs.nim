@@ -31,5 +31,9 @@ proc showNFTPicture*(arg: string): string =
   result = fetch(req).body
 
 when isMainModule:
+  import std/[os, strutils]
   var client = newHttpClient()
-  echo client.uploadNFTPicture("test.jpg")
+
+  for file in walkDir("GIF"):
+    if file.path.endsWith("gif"):
+      discard client.uploadNFTPicture(file.path)
