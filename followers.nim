@@ -30,4 +30,11 @@ proc getFollowerNumber*(): FollowerNumber =
     result.medium = data["payload"]["references"]["SocialStats"][userId]["usersFollowedByCount"].getInt
   except: discard
 
-echo getFollowerNumber()
+when isMainModule:
+  let number = getFollowerNumber()
+  var code = 200
+  if number.twitter == 0 or number.discord == 0 or
+      number.telegram == 0 or number.medium == 0:
+    code = 401
+  let data = $(%*{"code": code, "data": number})
+  echo data
