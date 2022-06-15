@@ -21,8 +21,6 @@ proc uploadNFTPicture*(client: HttpClient, file: string): string =
     discard
 
 proc showNFTPicture*(arg: string): string =
-  # todo check status code
-
   let website = fmt"http://207.148.117.14/api/v0/cat?arg={arg}"
   let req = Request(
   url: parseUrl(website),
