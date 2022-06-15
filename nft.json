@@ -1,0 +1,143 @@
+{
+    "total": 1,
+    "data": [
+        {
+            "address": "0x69E01E8AdA552DFd66028D7201147288Ea6470de",
+            "owner": "0x1BCe4AEF677f5d0f000E3e0F0adF5e2715E783af",
+            "name": "Starlight",
+            "description": "DiffusionDAO",
+            "symbol": "BP",
+            "totalSupply": "100",
+            "verified": true,
+            "createdAt": "2022-05-16T06:28:00.969Z",
+            "updatedAt": "2022-05-16T06:28:00.969Z",
+            "avatar": "QmQ4LpByGA5simsM9aeUP3f9jSN5YpfT3C6k8zdD5zKbpQ",
+            "banner": {
+                "large": "QmQ2teAsZvPxnTYceLE8rqLNdWQAJ52PkjyVpCgiy4AqWQ",
+                "small": "QmYBDvq16AHyMqqnyMJ2EUoSVWaYagJrwPogxJvhcyx2VA"
+            }
+        }
+    ],
+    "nft": [
+        {
+            "tokenId": "1",
+            "name": "Carina II.png",
+            "description": "Carina II.png",
+            "collectionName": "StarLight",
+            "collectionAddress": "0x69E01E8AdA552DFd66028D7201147288Ea6470de",
+            "image": {
+                "original": "string",
+                "thumbnail": "1"
+            },
+            "attributes": [
+                {
+                    "traitType": "xxx",
+                    "value": 1,
+                    "displayType": "xxx"
+                }
+            ],
+            "createdAt": "2022/05/27 14:00",
+            "updatedAt": "2022/05/27 14:00",
+            "location": "NftLocation.FORSALE",
+            "marketData": {
+                "tokenId": "1",
+                "collection": {
+                    "id": "1"
+                },
+                "currentAskPrice": "0.22",
+                "currentSeller": "diffusion",
+                "isTradable": true
+            }
+        },
+        {
+            "tokenId": "2",
+            "name": "2",
+            "description": "2",
+            "collectionName": "StarLight",
+            "collectionAddress": "0x69E01E8AdA552DFd66028D7201147288Ea6470de",
+            "image": {
+                "original": "string",
+                "thumbnail": "2"
+            },
+            "attributes": [
+                {
+                    "traitType": "xxx",
+                    "value": 1,
+                    "displayType": "xxx"
+                }
+            ],
+            "createdAt": "2022/05/27 14:00",
+            "updatedAt": "2022/05/27 14:00",
+            "location": "NftLocation.PROFILE",
+            "marketData": {
+                "tokenId": "2",
+                "collection": {
+                    "id": "2"
+                },
+                "currentAskPrice": "0.22",
+                "currentSeller": "diffusion",
+                "isTradable": true
+            }
+        },
+        {
+            "tokenId": "3",
+            "name": "3",
+            "description": "3",
+            "collectionName": "StarLight",
+            "collectionAddress": "0x69E01E8AdA552DFd66028D7201147288Ea6470de",
+            "image": {
+                "original": "string",
+                "thumbnail": "3"
+            },
+            "attributes": [
+                {
+                    "traitType": "xxx",
+                    "value": 1,
+                    "displayType": "xxx"
+                }
+            ],
+            "createdAt": "2022/05/27 14:00",
+            "updatedAt": "2022/05/27 14:00",
+            "location": "NftLocation.WALLET",
+            "marketData": {
+                "tokenId": "3",
+                "collection": {
+                    "id": "3"
+                },
+                "currentAskPrice": "0.22",
+                "currentSeller": "diffusion",
+                "isTradable": true
+            }
+        },
+        {
+            "tokenId": "4",
+            "name": "4",
+            "description": "4",
+            "collectionName": "StarLight",
+            "collectionAddress": "0x69E01E8AdA552DFd66028D7201147288Ea6470de",
+            "image": {
+                "original": "string",
+                "thumbnail": "4"
+            },
+            "attributes": [
+                {
+                    "traitType": "xxx",
+                    "value": 1,
+                    "displayType": "xxx"
+                }
+            ],
+            "createdAt": "2022/05/27 14:00",
+            "updatedAt": "2022/05/27 14:00",
+            "location": "NftLocation.WALLET",
+            "marketData": {
+                "tokenId": "4",
+                "collection": {
+                    "id": "4"
+                },
+                "currentAskPrice": "0.22",
+                "currentSeller": "diffusion",
+                "isTradable": true
+            }
+        }
+    ]
+}
