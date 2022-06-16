@@ -2,3 +2,4 @@
 --hints:off
 --warnings:off
 --define:ssl
+--threads:on
