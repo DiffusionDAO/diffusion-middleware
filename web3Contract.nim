@@ -67,8 +67,9 @@ contract(StarLight):
     # echo await pancakeRouter.swapExactTokensForTokens(UINT256MAX,UINT256MAX,[eggAddress, mebAddress], web3.defaultAccount, now).send(gas = 210000, gasPrice = 1000000000)
     # echo await pancakeRouter.swapExactTokensForTokens(UINT256MAX,UINT256MAX,[mebAddress, usdtAddress], web3.defaultAccount, now).send(gas = 210000, gasPrice = 1000000000)
 
+const startLightAddress* = "0x69E01E8AdA552DFd66028D7201147288Ea6470de"
 var web3Client = waitFor newWeb3("https://data-seed-prebsc-1-s1.binance.org:8545/")
-let starlight = web3Client.contractSender(StarLight, Address.fromHex "0x69E01E8AdA552DFd66028D7201147288Ea6470de")
+let starlight = web3Client.contractSender(StarLight, Address.fromHex startLightAddress)
 
 proc getTokenURI*(tokenId: int): string  = 
   result = waitFor starlight.tokenURI(tokenId.u256).call()

@@ -9,12 +9,13 @@ import std/httpclient
 import std/uri
 import puppy, re, os
 import jester
+import asyncfile
 
 settings:
   reusePort = true
 
-# const host = "http://localhost:5000"  
-const host = "http://154.210.13.181:5000"  
+const host = "http://localhost:5000"  
+# const host = "http://154.210.13.181:5000"  
 routes:
   get "/api/v0/concentration":
     let number = getFollowerNumber()
@@ -25,64 +26,55 @@ routes:
     let data = $(%*{"code": code, "data": number})
     resp data
 
-  get re"/collections":
-    var nft = parseFile("nft.json")
-    var data = nft["data"][0]
-    var req = puppy.Request(
-      url: parseUrl(fmt"""https://ipfs.infura.io:5001/api/v0/cat?arg={data["avatar"].getStr}"""),
-      verb: "post"
-    )
-    if not fileExists "public/nfts/avatar":
-      writeFile("public/nfts/avatar", fetch(req).body)
-    data["avatar"] = % &"{host}/nfts/avatar"
+  get "/nfts/collections":
+    {.gcsafe.}:
+      var nft = parseFile("nft.json")
+      var data = nft["data"][0]
 
-    req = puppy.Request(
-      url: parseUrl(fmt"""https://ipfs.infura.io:5001/api/v0/cat?arg={data["banner"]["small"].getStr}"""),
-      verb: "post"
-    )
-    if not fileExists "public/nfts/small":
-      writeFile("public/nfts/small", fetch(req).body)
-    data["banner"]["small"] = % &"{host}/nfts/small"
+      if not fileExists "public/nfts/avatar":
+        var req = puppy.Request(
+          url: parseUrl(fmt"""https://ipfs.infura.io:5001/api/v0/cat?arg={data["avatar"].getStr}"""),
+          verb: "post"
+        )
+        writeFile("public/nfts/avatar", fetch(req).body)
+      data["avatar"] = % &"{host}/nfts/avatar"
 
-    req = puppy.Request(
-      url: parseUrl(fmt"""https://ipfs.infura.io:5001/api/v0/cat?arg={data["banner"]["large"].getStr}"""),
-      verb: "post"
-    )
-    if not fileExists "public/nfts/large":
-      writeFile("public/nfts/large", fetch(req).body)
-    data["banner"]["large"] = % &"{host}/nfts/large"
+      if not fileExists "public/nfts/small":
+        var req = puppy.Request(
+          url: parseUrl(fmt"""https://ipfs.infura.io:5001/api/v0/cat?arg={data["banner"]["small"].getStr}"""),
+          verb: "post"
+        )
+        writeFile("public/nfts/small", fetch(req).body)
+      data["banner"]["small"] = % &"{host}/nfts/small"
 
-    resp Http200, {"Access-Control-Allow-Origin":"*"}, $nft
+      if not fileExists "public/nfts/large":
+        var req = puppy.Request(
+          url: parseUrl(fmt"""https://ipfs.infura.io:5001/api/v0/cat?arg={data["banner"]["large"].getStr}"""),
+          verb: "post"
+        )
+        writeFile("public/nfts/large", fetch(req).body)
+      data["banner"]["large"] = % &"{host}/nfts/large"
+      resp Http200, {"Access-Control-Allow-Origin":"*"}, $nft
 
-  get "/collection/@address":
-    var address = @"address"
-    echo "address: ", address
-    if address == "undefined": return
-    var dir = &"public/nfts/{address}"
-    if not dirExists dir:
-      echo "createDir: ", dir
-      createDir  dir
+  get "/nfts/collections/@address/tokens/@tokenId":
+        var address = @"address"
+        var tokenId = parseInt @"tokenId"
+        echo address, " ", tokenId
+        var nfts = parseFile("nft.json")
+        var nft = nfts[address][tokenId]
+        resp Http200, {"Access-Control-Allow-Origin":"*"}, $nft
 
-    var totalSupply = getTotalSupply().toInt()
-    echo "totalSupply:", totalSupply
-    for i in 0..totalSupply - 1:
-      if not fileExists &"public/nfts/{address}/{i}":
-        var data = getTokenURI(i)
-        var length = fromHex[int] data[64 .. 127]
-        var tokenURI = data[128 .. 128 + length*2 - 1].parseHexStr
-        var client = newAsyncHttpClient()
-        defer: client.close()
-        var response = await client.post(fmt"http://207.148.117.14:5002/api/v0/cat?arg={tokenUri}")
-        var body = await response.body()
-        writeFile(&"public/nfts/{address}/{i}", body)
+  get "/nfts/collections/@address":
+        var address = @"address"
+        var id = 0
+        var nft = parseFile("nft.json")
+        var nfts = nft[address]
+        for item in nfts:
+          if item["collectionAddress"].getStr == address:
+              item["image"]["thumbnail"] = % &"{host}/nfts/{address}/{id}"
+              id.inc
+        # writeFile("nft.json", $nft)
+        resp Http200, {"Access-Control-Allow-Origin":"*"}, $nft
 
-    var id = 0
-    var nft = parseFile("nft.json")
-    for item in nft["nft"]:
-      if item["collectionAddress"].getStr == address:
-          item["image"]["thumbnail"] = % &"{host}/nfts/{address}/{id}"
-          id.inc
-
-    resp Http200, {"Access-Control-Allow-Origin":"*"}, $nft
 
 runForever()

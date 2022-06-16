@@ -18,16 +18,16 @@
             }
         }
     ],
-    "nft": [
+    "0x69E01E8AdA552DFd66028D7201147288Ea6470de": [
         {
-            "tokenId": "1",
+            "tokenId": "0",
             "name": "Carina II.png",
             "description": "Carina II.png",
             "collectionName": "StarLight",
             "collectionAddress": "0x69E01E8AdA552DFd66028D7201147288Ea6470de",
             "image": {
                 "original": "string",
-                "thumbnail": "1"
+                "thumbnail": "http://localhost:5000/nfts/0x69E01E8AdA552DFd66028D7201147288Ea6470de/0"
             },
             "attributes": [
                 {
@@ -40,24 +40,24 @@
             "updatedAt": "2022/05/27 14:00",
             "location": "NftLocation.FORSALE",
             "marketData": {
-                "tokenId": "1",
+                "tokenId": "0",
                 "collection": {
-                    "id": "1"
+                    "id": "0"
                 },
-                "currentAskPrice": "0.22",
-                "currentSeller": "diffusion",
+                "currentAskPrice": "",
+                "currentSeller": "",
                 "isTradable": true
             }
         },
         {
-            "tokenId": "2",
-            "name": "2",
-            "description": "2",
+            "tokenId": "1",
+            "name": "Carina II.png",
+            "description": "Carina II.png",
             "collectionName": "StarLight",
             "collectionAddress": "0x69E01E8AdA552DFd66028D7201147288Ea6470de",
             "image": {
                 "original": "string",
-                "thumbnail": "2"
+                "thumbnail": "http://localhost:5000/nfts/0x69E01E8AdA552DFd66028D7201147288Ea6470de/1"
             },
             "attributes": [
                 {
@@ -70,24 +70,54 @@
             "updatedAt": "2022/05/27 14:00",
             "location": "NftLocation.PROFILE",
             "marketData": {
+                "tokenId": "1",
+                "collection": {
+                    "id": "1"
+                },
+                "currentAskPrice": "",
+                "currentSeller": "",
+                "isTradable": true
+            }
+        },
+        {
+            "tokenId": "2",
+            "name": "Carina II.png",
+            "description": "Carina II.png",
+            "collectionName": "StarLight",
+            "collectionAddress": "0x69E01E8AdA552DFd66028D7201147288Ea6470de",
+            "image": {
+                "original": "string",
+                "thumbnail": "http://localhost:5000/nfts/0x69E01E8AdA552DFd66028D7201147288Ea6470de/2"
+            },
+            "attributes": [
+                {
+                    "traitType": "xxx",
+                    "value": 1,
+                    "displayType": "xxx"
+                }
+            ],
+            "createdAt": "2022/05/27 14:00",
+            "updatedAt": "2022/05/27 14:00",
+            "location": "NftLocation.WALLET",
+            "marketData": {
                 "tokenId": "2",
                 "collection": {
                     "id": "2"
                 },
-                "currentAskPrice": "0.22",
-                "currentSeller": "diffusion",
+                "currentAskPrice": "",
+                "currentSeller": "",
                 "isTradable": true
             }
         },
         {
             "tokenId": "3",
-            "name": "3",
-            "description": "3",
+            "name": "Carina II.png",
+            "description": "Carina II.png",
             "collectionName": "StarLight",
             "collectionAddress": "0x69E01E8AdA552DFd66028D7201147288Ea6470de",
             "image": {
                 "original": "string",
-                "thumbnail": "3"
+                "thumbnail": "http://localhost:5000/nfts/0x69E01E8AdA552DFd66028D7201147288Ea6470de/3"
             },
             "attributes": [
                 {
@@ -104,38 +134,8 @@
                 "collection": {
                     "id": "3"
                 },
-                "currentAskPrice": "0.22",
-                "currentSeller": "diffusion",
-                "isTradable": true
-            }
-        },
-        {
-            "tokenId": "4",
-            "name": "4",
-            "description": "4",
-            "collectionName": "StarLight",
-            "collectionAddress": "0x69E01E8AdA552DFd66028D7201147288Ea6470de",
-            "image": {
-                "original": "string",
-                "thumbnail": "4"
-            },
-            "attributes": [
-                {
-                    "traitType": "xxx",
-                    "value": 1,
-                    "displayType": "xxx"
-                }
-            ],
-            "createdAt": "2022/05/27 14:00",
-            "updatedAt": "2022/05/27 14:00",
-            "location": "NftLocation.WALLET",
-            "marketData": {
-                "tokenId": "4",
-                "collection": {
-                    "id": "4"
-                },
-                "currentAskPrice": "0.22",
-                "currentSeller": "diffusion",
+                "currentAskPrice": "",
+                "currentSeller": "",
                 "isTradable": true
             }
         }
