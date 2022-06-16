@@ -27,7 +27,7 @@
             "collectionAddress": "0x69E01E8AdA552DFd66028D7201147288Ea6470de",
             "image": {
                 "original": "string",
-                "thumbnail": "http://localhost:5000/nfts/0x69E01E8AdA552DFd66028D7201147288Ea6470de/0"
+                "thumbnail": "0"
             },
             "attributes": [
                 {
@@ -57,7 +57,7 @@
             "collectionAddress": "0x69E01E8AdA552DFd66028D7201147288Ea6470de",
             "image": {
                 "original": "string",
-                "thumbnail": "http://localhost:5000/nfts/0x69E01E8AdA552DFd66028D7201147288Ea6470de/1"
+                "thumbnail": "1"
             },
             "attributes": [
                 {
@@ -87,7 +87,7 @@
             "collectionAddress": "0x69E01E8AdA552DFd66028D7201147288Ea6470de",
             "image": {
                 "original": "string",
-                "thumbnail": "http://localhost:5000/nfts/0x69E01E8AdA552DFd66028D7201147288Ea6470de/2"
+                "thumbnail": "2"
             },
             "attributes": [
                 {
@@ -117,7 +117,7 @@
             "collectionAddress": "0x69E01E8AdA552DFd66028D7201147288Ea6470de",
             "image": {
                 "original": "string",
-                "thumbnail": "http://localhost:5000/nfts/0x69E01E8AdA552DFd66028D7201147288Ea6470de/3"
+                "thumbnail": "3"
             },
             "attributes": [
                 {
