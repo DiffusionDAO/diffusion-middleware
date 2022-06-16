@@ -88,3 +88,7 @@ proc getTotalSupply*(): UInt256  =
   defer: waitFor web3Client.close()
   let starlight = web3Client.contractSender(StarLight, Address.fromHex "0x69E01E8AdA552DFd66028D7201147288Ea6470de")
   result = waitFor starlight.totalSupply().call()
+
+when isMainModule:
+  var ts = getTotalSupply().toInt()
+  echo "totalSupply:", ts
