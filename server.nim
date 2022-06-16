@@ -14,8 +14,8 @@ import asyncfile
 settings:
   reusePort = true
 
-const host = "http://localhost:5000"  
-# const host = "http://154.210.13.181:5000"  
+# const host = "http://localhost:5000"  
+const host = "http://154.210.13.181:5000"  
 routes:
   get "/api/v0/concentration":
     let number = getFollowerNumber()
