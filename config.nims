@@ -1,5 +1,5 @@
 --define:release
 --hints:off
 --warnings:off
---define:ssl
 --threads:on
+--gc:orc
