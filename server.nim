@@ -14,8 +14,8 @@ import asyncfile
 settings:
   reusePort = true
 
-# const host = "http://localhost:5000"  
-const host = "http://154.210.13.181:5000"  
+const host = "http://localhost:5000"  
+# const host = "http://154.210.13.181:5000"  
 routes:
   get "/api/v0/concentration":
     let number = getFollowerNumber()
@@ -62,6 +62,7 @@ routes:
         echo address, " ", tokenId
         var nfts = parseFile("nft.json")
         var nft = nfts[address][tokenId]
+        nft["image"]["thumbnail"] = % &"{host}/nfts/{address}/{tokenId}"
         resp Http200, {"Access-Control-Allow-Origin":"*"}, $nft
 
   get "/nfts/collections/@address":
