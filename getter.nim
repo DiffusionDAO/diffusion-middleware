@@ -22,7 +22,7 @@ proc getter() {.async.} =
                 var avatar = &"public/nfts/{collection}/avatar"
                 if not fileExists avatar:
                     var req = puppy.Request(
-                        url: parseUrl(fmt"""https://ipfs.infura.io:5001/api/v0/cat?arg={data["avatar"].getStr}"""),
+                        url: parseUrl(fmt"""http://127.0.0.1:5001/api/v0/cat?arg={data["avatar"].getStr}"""),
                         verb: "post"
                     )
                     writeFile(avatar, fetch(req).body)
@@ -30,7 +30,7 @@ proc getter() {.async.} =
                 var small = &"public/nfts/{collection}/small"
                 if not fileExists small:
                     var req = puppy.Request(
-                        url: parseUrl(fmt"""https://ipfs.infura.io:5001/api/v0/cat?arg={data["banner"]["small"].getStr}"""),
+                        url: parseUrl(fmt"""http://127.0.0.1:5001/api/v0/cat?arg={data["banner"]["small"].getStr}"""),
                         verb: "post"
                     )
                     writeFile(small, fetch(req).body)
@@ -38,7 +38,7 @@ proc getter() {.async.} =
                 var large = &"public/nfts/{collection}/large"
                 if not fileExists large:
                     var req = puppy.Request(
-                        url: parseUrl(fmt"""https://ipfs.infura.io:5001/api/v0/cat?arg={data["banner"]["large"].getStr}"""),
+                        url: parseUrl(fmt"""http://127.0.0.1:5001/api/v0/cat?arg={data["banner"]["large"].getStr}"""),
                         verb: "post"
                     )
                     writeFile(large, fetch(req).body)
@@ -58,7 +58,7 @@ proc getter() {.async.} =
                         var tokenURI = data[128 .. 128 + length*2 - 1].parseHexStr
                         var client = newHttpClient()
                         defer: client.close()
-                        var response = client.post(fmt"http://207.148.117.14:5002/api/v0/cat?arg={tokenURI}")
+                        var response = client.post(fmt"http://127.0.0.1:5001/api/v0/cat?arg={tokenURI}")
                         var body = response.body()
                         writeFile(path, body)
             sleep(1000)
