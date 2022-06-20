@@ -13,9 +13,10 @@ import asyncfile
 
 settings:
   reusePort = true
+  port = Port(80)
 
 # const host = "http://localhost:5000"  
-const host = "http://45.77.241.62:5000"  
+const host = "https://middle.diffusiondao.org" 
 routes:
   get "/api/v0/concentration":
     let number = getFollowerNumber()
@@ -25,6 +26,19 @@ routes:
       code = 401
     let data = $(%*{"code": code, "data": number})
     resp data
+    
+  get "/nfts/collections":
+    {.gcsafe.}:
+      var nft = parseFile("nft.json")
+      for collection, data in nft:
+        var data = data["data"][0]
+        data["avatar"] = % &"{host}/nfts/{collection}/avatar"
+        data["banner"]["small"] = % &"{host}/nfts/{collection}/small"
+        data["banner"]["large"] = % &"{host}/nfts/{collection}/large"
+        for item in nft[collection]["tokens"]:
+          var thumbnail = item["image"]["thumbnail"].getStr
+          item["image"]["thumbnail"] = % &"{host}/nfts/{collection}/{thumbnail}"
+      resp Http200, {"Access-Control-Allow-Origin":"*"}, $nft
 
   get "/nfts/collections/@address/tokens/@tokenId":
         var address = @"address"
@@ -37,7 +51,6 @@ routes:
 
   get "/nfts/collections/@address":
         var address = @"address"
-        echo address
         var nft = parseFile("nft.json")
         for collection, data in nft:
           var data = data["data"][0]
@@ -50,14 +63,6 @@ routes:
             item["image"]["thumbnail"] = % &"{host}/nfts/{address}/{thumbnail}"
         resp Http200, {"Access-Control-Allow-Origin":"*"}, $nft
 
-  get "/nfts/collections":
-    {.gcsafe.}:
-      var nft = parseFile("nft.json")
-      for collection, data in nft:
-        var data = data["data"][0]
-        data["avatar"] = % &"{host}/nfts/{collection}/avatar"
-        data["banner"]["small"] = % &"{host}/nfts/{collection}/small"
-        data["banner"]["large"] = % &"{host}/nfts/{collection}/large"
-      resp Http200, {"Access-Control-Allow-Origin":"*"}, $nft
+
 
 runForever()
