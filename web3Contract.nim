@@ -9,7 +9,7 @@ contract(StarLight):
   proc name(): string {.view.}
   
 
-const startLightAddress* = "0x69E01E8AdA552DFd66028D7201147288Ea6470de"
+const startLightAddress* = "0x5984BE31fA3A9bFace8b0946ea780a5D347034E0"
 var web3Client = waitFor newWeb3("https://data-seed-prebsc-1-s1.binance.org:8545/")
 let starlight = web3Client.contractSender(StarLight, Address.fromHex startLightAddress)
 
