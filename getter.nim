@@ -57,9 +57,8 @@ proc getter() {.async.} =
                     var path = &"public/nfts/{collection}/{i}"
                     if not fileExists path:
                         var owner = getOwner(i)
-                        var data = getTokenURI(i)
-                        var length = fromHex[int] data[64 .. 127]
-                        var tokenURI = data[128 .. 128 + length*2 - 1].parseHexStr
+                        var tokenURI = getTokenURI(i)
+
                         var client = newHttpClient()
                         defer: client.close()
                         var response = client.post(fmt"http://127.0.0.1:5001/api/v0/cat?arg={tokenURI}")

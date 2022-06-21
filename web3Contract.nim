@@ -14,10 +14,14 @@ var web3Client = waitFor newWeb3("https://data-seed-prebsc-1-s1.binance.org:8545
 let starlight = web3Client.contractSender(StarLight, Address.fromHex startLightAddress)
 
 proc getTokenURI*(tokenId: int): string  = 
-  result = waitFor starlight.tokenURI(tokenId.u256).call()
+  var data = waitFor starlight.tokenURI(tokenId.u256).call()
+  var length = strutils.fromHex[int](data[64 .. 127])
+  result = data[128 .. 128 + length*2 - 1].parseHexStr
 
 proc getName*(): string  = 
-  result = waitFor starlight.name().call()
+  var data = waitFor starlight.name().call()
+  var length = strutils.fromHex[int](data[64 .. 127])
+  result = data[128 .. 128 + length*2 - 1].parseHexStr
 
 proc getTotalSupply*(): UInt256  = 
   result = waitFor starlight.totalSupply().call()

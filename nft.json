@@ -1,10 +1,10 @@
 {
     "0x69E01E8AdA552DFd66028D7201147288Ea6470de": {
-        "total": 4,
+        "total": 0,
         "data": [
             {
-                "address": "0x69E01E8AdA552DFd66028D7201147288Ea6470de",
-                "owner": "0x389c5D2064Ec4e2408b414f286F1580F60E69089",
+                "address": "0x5984BE31fA3A9bFace8b0946ea780a5D347034E0",
+                "owner": "0x0a24F5df83B3bAA3982aCe21D051F525F02c5dE1",
                 "name": "Starlight",
                 "description": "DiffusionDAO",
                 "symbol": "SL",
@@ -19,127 +19,6 @@
                 }
             }
         ],
-        "tokens": [
-            {
-                "tokenId": "0",
-                "name": "Carina II.png",
-                "description": "Carina II.png",
-                "collectionName": "StarLight",
-                "collectionAddress": "0x69E01E8AdA552DFd66028D7201147288Ea6470de",
-                "image": {
-                    "original": "string",
-                    "thumbnail": "0"
-                },
-                "attributes": [
-                    {
-                        "traitType": "xxx",
-                        "value": 1,
-                        "displayType": "xxx"
-                    }
-                ],
-                "createdAt": "2022/05/27 14:00",
-                "updatedAt": "2022/05/27 14:00",
-                "location": "For Sale",
-                "marketData": {
-                    "tokenId": "0",
-                    "collection": {
-                        "id": "0"
-                    },
-                    "currentAskPrice": "",
-                    "currentSeller": "",
-                    "isTradable": true
-                }
-            },
-            {
-                "tokenId": "1",
-                "name": "Carina II.png",
-                "description": "Carina II.png",
-                "collectionName": "StarLight",
-                "collectionAddress": "0x69E01E8AdA552DFd66028D7201147288Ea6470de",
-                "image": {
-                    "original": "string",
-                    "thumbnail": "1"
-                },
-                "attributes": [
-                    {
-                        "traitType": "xxx",
-                        "value": 1,
-                        "displayType": "xxx"
-                    }
-                ],
-                "createdAt": "2022/05/27 14:00",
-                "updatedAt": "2022/05/27 14:00",
-                "location": "Profile Pic",
-                "marketData": {
-                    "tokenId": "1",
-                    "collection": {
-                        "id": "1"
-                    },
-                    "currentAskPrice": "",
-                    "currentSeller": "",
-                    "isTradable": true
-                }
-            },
-            {
-                "tokenId": "2",
-                "name": "Carina II.png",
-                "description": "Carina II.png",
-                "collectionName": "StarLight",
-                "collectionAddress": "0x69E01E8AdA552DFd66028D7201147288Ea6470de",
-                "image": {
-                    "original": "string",
-                    "thumbnail": "2"
-                },
-                "attributes": [
-                    {
-                        "traitType": "xxx",
-                        "value": 1,
-                        "displayType": "xxx"
-                    }
-                ],
-                "createdAt": "2022/05/27 14:00",
-                "updatedAt": "2022/05/27 14:00",
-                "location": "In Wallet",
-                "marketData": {
-                    "tokenId": "2",
-                    "collection": {
-                        "id": "2"
-                    },
-                    "currentAskPrice": "",
-                    "currentSeller": "",
-                    "isTradable": true
-                }
-            },
-            {
-                "tokenId": "3",
-                "name": "Carina II.png",
-                "description": "Carina II.png",
-                "collectionName": "StarLight",
-                "collectionAddress": "0x69E01E8AdA552DFd66028D7201147288Ea6470de",
-                "image": {
-                    "original": "string",
-                    "thumbnail": "3"
-                },
-                "attributes": [
-                    {
-                        "traitType": "xxx",
-                        "value": 1,
-                        "displayType": "xxx"
-                    }
-                ],
-                "createdAt": "2022/05/27 14:00",
-                "updatedAt": "2022/05/27 14:00",
-                "location": "In Wallet",
-                "marketData": {
-                    "tokenId": "3",
-                    "collection": {
-                        "id": "3"
-                    },
-                    "currentAskPrice": "",
-                    "currentSeller": "",
-                    "isTradable": true
-                }
-            }
-        ]
+        "tokens": []
     }
 }
