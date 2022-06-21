@@ -17,6 +17,8 @@ proc getter() {.async.} =
         try:
             var nft = parseFile("nft.json")
             var keys = nft.keys().toSeq()
+            var name = getName()
+            var time = now().toTime().format("yyyy/MM/dd HH:mm")
             for collection, data in nft:
                 var data = data["data"][0]
                 var avatar = &"public/nfts/{collection}/avatar"
@@ -50,9 +52,11 @@ proc getter() {.async.} =
 
                 var totalSupply = getTotalSupply().toInt()
                 echo "totalSupply:", totalSupply
+                nft["total"] = %totalSupply
                 for i in 0..totalSupply - 1:
                     var path = &"public/nfts/{collection}/{i}"
                     if not fileExists path:
+                        var owner = getOwner(i)
                         var data = getTokenURI(i)
                         var length = fromHex[int] data[64 .. 127]
                         var tokenURI = data[128 .. 128 + length*2 - 1].parseHexStr
@@ -61,6 +65,35 @@ proc getter() {.async.} =
                         var response = client.post(fmt"http://127.0.0.1:5001/api/v0/cat?arg={tokenURI}")
                         var body = response.body()
                         writeFile(path, body)
+                        nft["tokens"].add %*{"tokenId": $i,
+                                            "name": name,
+                                            "description": name,
+                                            "collectionName": name,
+                                            "collectionAddress": collection,
+                                            "image": {
+                                                "original": "string",
+                                                "thumbnail": $i
+                                            },
+                                            "attributes": [
+                                                {
+                                                    "traitType": "",
+                                                    "value": 0,
+                                                    "displayType": ""
+                                                }
+                                            ],
+                                            "createdAt": time,
+                                            "updatedAt": time,
+                                            "location": "For Sale",
+                                            "marketData": {
+                                                "tokenId": $i,
+                                                "collection": {
+                                                    "id": $i
+                                                },
+                                                "currentAskPrice": "",
+                                                "currentSeller": owner,
+                                                "isTradable": true
+                                            }}
+            writeFile("nft.json", $nft)
             sleep(1000)
         except:
             echo getCurrentExceptionMsg()

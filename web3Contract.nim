@@ -6,6 +6,7 @@ contract(StarLight):
   proc tokenURI(tokenId: Uint256): string {.view.}
   proc totalSupply(): Uint256 {.view.}
   proc ownerOf(id: Uint256): Address {.view.}
+  proc name(): string {.view.}
   
 
 const startLightAddress* = "0x69E01E8AdA552DFd66028D7201147288Ea6470de"
@@ -14,6 +15,9 @@ let starlight = web3Client.contractSender(StarLight, Address.fromHex startLightA
 
 proc getTokenURI*(tokenId: int): string  = 
   result = waitFor starlight.tokenURI(tokenId.u256).call()
+
+proc getName*(): string  = 
+  result = waitFor starlight.name().call()
 
 proc getTotalSupply*(): UInt256  = 
   result = waitFor starlight.totalSupply().call()
