@@ -52,7 +52,7 @@ proc getter() {.async.} =
 
                 var totalSupply = getTotalSupply().toInt()
                 echo "totalSupply:", totalSupply
-                nft["total"] = %totalSupply
+                
                 for i in 0..totalSupply - 1:
                     var path = &"public/nfts/{collection}/{i}"
                     if not fileExists path:
@@ -65,7 +65,7 @@ proc getter() {.async.} =
                         var response = client.post(fmt"http://127.0.0.1:5001/api/v0/cat?arg={tokenURI}")
                         var body = response.body()
                         writeFile(path, body)
-                        nft["tokens"].add %*{"tokenId": $i,
+                        nft[collection]["tokens"].add %*{"tokenId": $i,
                                             "name": name,
                                             "description": name,
                                             "collectionName": name,
@@ -93,7 +93,9 @@ proc getter() {.async.} =
                                                 "currentSeller": owner,
                                                 "isTradable": true
                                             }}
-            writeFile("nft.json", $nft)
+                if nft[collection]["total"].getInt != totalSupply :
+                    nft[collection]["total"] = %totalSupply
+                    writeFile("nft.json", $nft)
             sleep(1000)
         except:
             echo getCurrentExceptionMsg()
