@@ -18,13 +18,13 @@ settings:
 # const host = "http://localhost:5000"  
 const host = "https://middle.diffusiondao.org" 
 routes:
-  get "/api/v0/concentration":
+  get "/api/v0/dashboard":
     let number = getFollowerNumber()
     var code = 200
     if number.twitter == 0 or number.discord == 0 or
         number.telegram == 0 or number.medium == 0:
       code = 401
-    let data = $(%*{"code": code, "data": number})
+    let data = $(%*{"code": code, "concentration": number})
     resp data
     
   get "/nfts/collections":
