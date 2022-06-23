@@ -63,6 +63,4 @@ routes:
             item["image"]["thumbnail"] = % &"{host}/nfts/{address}/{thumbnail}"
         resp Http200, {"Access-Control-Allow-Origin":"*"}, $nft
 
-
-
 runForever()
