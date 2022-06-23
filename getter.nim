@@ -19,6 +19,7 @@ proc getter() {.async.} =
             var keys = nft.keys().toSeq()
             var name = getName()
             var time = now().toTime().format("yyyy/MM/dd HH:mm")
+            var client = newHttpClient()
             for collection, data in nft:
                 var dir = &"public/nfts/{collection}"
                 if not dirExists dir:
@@ -29,37 +30,29 @@ proc getter() {.async.} =
                 var data = data["data"][0]
                 var avatar = &"public/nfts/{collection}/avatar"
                 if not fileExists avatar:
-                    var req = puppy.Request(
-                        url: parseUrl(fmt"""http://127.0.0.1:5001/api/v0/cat?arg={data["avatar"].getStr}"""),
-                        verb: "post"
-                    )
-                    writeFile(avatar, fetch(req).body)
+                    var response = client.post(fmt"""http://127.0.0.1:5001/api/v0/cat?arg={data["avatar"].getStr}""")
+                    var body = response.body()
+                    writeFile(avatar, body)
 
                 var small = &"public/nfts/{collection}/small"
                 if not fileExists small:
-                    var req = puppy.Request(
-                        url: parseUrl(fmt"""http://127.0.0.1:5001/api/v0/cat?arg={data["banner"]["small"].getStr}"""),
-                        verb: "post"
-                    )
-                    writeFile(small, fetch(req).body)
+                    var response = client.post(fmt"""http://127.0.0.1:5001/api/v0/cat?arg={data["banner"]["small"].getStr}""")
+                    var body = response.body()
+                    writeFile(small, body)
 
                 var large = &"public/nfts/{collection}/large"
                 if not fileExists large:
-                    var req = puppy.Request(
-                        url: parseUrl(fmt"""http://127.0.0.1:5001/api/v0/cat?arg={data["banner"]["large"].getStr}"""),
-                        verb: "post"
-                    )
-                    writeFile(large, fetch(req).body)
+                    var response = client.post(fmt"""http://127.0.0.1:5001/api/v0/cat?arg={data["banner"]["large"].getStr}""")
+                    var body = response.body()
+                    writeFile(large, body)
 
                 for i in 0..totalSupply - 1:
                     var path = &"public/nfts/{collection}/{i}"
                     if not fileExists path:
                         var owner = getOwner(i)
                         var tokenURI = getTokenURI(i)
-
-                        var client = newHttpClient()
-                        defer: client.close()
-                        var response = client.post(fmt"http://127.0.0.1:5001/api/v0/cat?arg={tokenURI}")
+                        var url = fmt"http://127.0.0.1:5001/api/v0/cat?arg={tokenURI}"
+                        var response = client.post(url)
                         var body = response.body()
                         writeFile(path, body)
                         nft[collection]["tokens"].add %*{"tokenId": $i,
@@ -90,9 +83,11 @@ proc getter() {.async.} =
                                                 "currentSeller": owner,
                                                 "isTradable": true
                                             }}
+                
                 if nft[collection]["total"].getInt != totalSupply :
                     nft[collection]["total"] = %totalSupply
                     writeFile("nft.json", $nft)
+            client.close()
             sleep(1000)
         except:
             echo getCurrentExceptionMsg()
