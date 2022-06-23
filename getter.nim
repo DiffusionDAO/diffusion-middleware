@@ -20,6 +20,12 @@ proc getter() {.async.} =
             var name = getName()
             var time = now().toTime().format("yyyy/MM/dd HH:mm")
             for collection, data in nft:
+                var dir = &"public/nfts/{collection}"
+                if not dirExists dir:
+                    echo "createDir: ", dir
+                    createDir  dir
+                var totalSupply = getTotalSupply().toInt()
+                echo "totalSupply:", totalSupply
                 var data = data["data"][0]
                 var avatar = &"public/nfts/{collection}/avatar"
                 if not fileExists avatar:
@@ -45,14 +51,6 @@ proc getter() {.async.} =
                     )
                     writeFile(large, fetch(req).body)
 
-                var dir = &"public/nfts/{collection}"
-                if not dirExists dir:
-                    echo "createDir: ", dir
-                    createDir  dir
-
-                var totalSupply = getTotalSupply().toInt()
-                echo "totalSupply:", totalSupply
-                
                 for i in 0..totalSupply - 1:
                     var path = &"public/nfts/{collection}/{i}"
                     if not fileExists path:
