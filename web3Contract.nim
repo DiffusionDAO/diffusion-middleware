@@ -35,4 +35,6 @@ when isMainModule:
   # var balance = waitFor client.provider.eth_getBalance(account, "latest")
   # echo balance
   var ts = getTotalSupply().toInt()
-  echo "totalSupply:", ts
+  var owner = getOwner(0)
+  var uri = getTokenURI(0)
+  echo ts, owner, uri
