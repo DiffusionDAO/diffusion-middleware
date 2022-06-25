@@ -55,37 +55,39 @@ proc getter() {.async.} =
                         var response = client.post(url)
                         var body = response.body()
                         writeFile(path, body)
-                        nft[collection]["tokens"].add %*{"tokenId": $i,
-                                            "name": name,
-                                            "description": name,
-                                            "collectionName": name,
-                                            "collectionAddress": collection,
-                                            "image": {
-                                                "original": "string",
-                                                "thumbnail": $i
-                                            },
-                                            "attributes": [
-                                                {
-                                                    "traitType": "",
-                                                    "value": 0,
-                                                    "displayType": ""
-                                                }
-                                            ],
-                                            "createdAt": time,
-                                            "updatedAt": time,
-                                            "location": "For Sale",
-                                            "marketData": {
-                                                "tokenId": $i,
-                                                "collection": {
-                                                    "id": $i
+                        if nft[collection]["tokens"].len == i:
+                            nft[collection]["tokens"].add %*{"tokenId": $i,
+                                                "name": name,
+                                                "description": name,
+                                                "collectionName": name,
+                                                "collectionAddress": collection,
+                                                "image": {
+                                                    "original": "string",
+                                                    "thumbnail": $i
                                                 },
-                                                "currentAskPrice": "",
-                                                "currentSeller": owner,
-                                                "isTradable": true
-                                            }}
+                                                "attributes": [
+                                                    {
+                                                        "traitType": "",
+                                                        "value": 0,
+                                                        "displayType": ""
+                                                    }
+                                                ],
+                                                "createdAt": time,
+                                                "updatedAt": time,
+                                                "location": "For Sale",
+                                                "marketData": {
+                                                    "tokenId": $i,
+                                                    "collection": {
+                                                        "id": $i
+                                                    },
+                                                    "currentAskPrice": "",
+                                                    "currentSeller": owner,
+                                                    "isTradable": true
+                                                }}
                 
                 if nft[collection]["total"].getInt != totalSupply :
                     nft[collection]["total"] = %totalSupply
+                    nft[collection]["data"][0]["totalSupply"] = %totalSupply
                     writeFile("nft.json", $nft)
             client.close()
             sleep(1000)
