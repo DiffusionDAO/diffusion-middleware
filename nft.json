@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {
     "0x88eBFd7841D131BCeab3e7149217aa8e36985a40": {
         "total": 16,
@@ -705,4 +706,29 @@
             }
         ]
     }
+=======
+{
+    "0x88eBFd7841D131BCeab3e7149217aa8e36985a40": {
+        "total": 0,
+        "data": [
+            {
+                "address": "0x88eBFd7841D131BCeab3e7149217aa8e36985a40",
+                "owner": "0x0a24F5df83B3bAA3982aCe21D051F525F02c5dE1",
+                "name": "Starlight",
+                "description": "DiffusionDAO",
+                "symbol": "SL",
+                "totalSupply": "0",
+                "verified": true,
+                "createdAt": "2022-05-16T06:28:00.969Z",
+                "updatedAt": "2022-05-16T06:28:00.969Z",
+                "avatar": "QmQ4LpByGA5simsM9aeUP3f9jSN5YpfT3C6k8zdD5zKbpQ",
+                "banner": {
+                    "large": "QmQ2teAsZvPxnTYceLE8rqLNdWQAJ52PkjyVpCgiy4AqWQ",
+                    "small": "QmYBDvq16AHyMqqnyMJ2EUoSVWaYagJrwPogxJvhcyx2VA"
+                }
+            }
+        ],
+        "tokens": []
+    }
+>>>>>>> a555eaa7085d8edcb203d5a77e9b1132a0892361
 }
