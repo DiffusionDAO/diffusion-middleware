@@ -17,15 +17,15 @@ proc getter() {.async.} =
         try:
             var nft = parseFile("nft.json")
             var keys = nft.keys().toSeq()
-            var name = getName()
             var time = now().toTime().format("yyyy/MM/dd HH:mm")
             var client = newHttpClient()
             for collection, data in nft:
+                var name = getName(collection)
                 var dir = &"public/nfts/{collection}"
                 if not dirExists dir:
                     echo "createDir: ", dir
                     createDir  dir
-                var totalSupply = getTotalSupply().toInt()
+                var totalSupply = getTotalSupply(collection).toInt()
                 echo "totalSupply:", totalSupply
                 var data = data["data"][0]
                 var avatar = &"public/nfts/{collection}/avatar"
@@ -49,43 +49,45 @@ proc getter() {.async.} =
                 for i in 0..totalSupply - 1:
                     var path = &"public/nfts/{collection}/{i}"
                     if not fileExists path:
-                        var owner = getOwner(i)
-                        var tokenURI = getTokenURI(i)
+                        var owner = getOwner(collection, i)
+                        var tokenURI = getTokenURI(collection, i)
                         var url = fmt"http://127.0.0.1:5001/api/v0/cat?arg={tokenURI}"
                         var response = client.post(url)
                         var body = response.body()
                         writeFile(path, body)
-                        nft[collection]["tokens"].add %*{"tokenId": $i,
-                                            "name": name,
-                                            "description": name,
-                                            "collectionName": name,
-                                            "collectionAddress": collection,
-                                            "image": {
-                                                "original": "string",
-                                                "thumbnail": $i
-                                            },
-                                            "attributes": [
-                                                {
-                                                    "traitType": "",
-                                                    "value": 0,
-                                                    "displayType": ""
-                                                }
-                                            ],
-                                            "createdAt": time,
-                                            "updatedAt": time,
-                                            "location": "For Sale",
-                                            "marketData": {
-                                                "tokenId": $i,
-                                                "collection": {
-                                                    "id": $i
+                        if nft[collection]["tokens"].len == i:
+                            nft[collection]["tokens"].add %*{"tokenId": $i,
+                                                "name": name,
+                                                "description": name,
+                                                "collectionName": name,
+                                                "collectionAddress": collection,
+                                                "image": {
+                                                    "original": "string",
+                                                    "thumbnail": $i
                                                 },
-                                                "currentAskPrice": "",
-                                                "currentSeller": owner,
-                                                "isTradable": true
-                                            }}
+                                                "attributes": [
+                                                    {
+                                                        "traitType": "",
+                                                        "value": 0,
+                                                        "displayType": ""
+                                                    }
+                                                ],
+                                                "createdAt": time,
+                                                "updatedAt": time,
+                                                "location": "For Sale",
+                                                "marketData": {
+                                                    "tokenId": $i,
+                                                    "collection": {
+                                                        "id": $i
+                                                    },
+                                                    "currentAskPrice": "",
+                                                    "currentSeller": owner,
+                                                    "isTradable": true
+                                                }}
                 
                 if nft[collection]["total"].getInt != totalSupply :
                     nft[collection]["total"] = %totalSupply
+                    nft[collection]["data"][0]["totalSupply"] = %totalSupply
                     writeFile("nft.json", $nft)
             client.close()
             sleep(1000)

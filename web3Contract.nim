@@ -13,28 +13,32 @@ const startLightAddress* = "0x88eBFd7841D131BCeab3e7149217aa8e36985a40"
 var web3Client = waitFor newWeb3("https://data-seed-prebsc-1-s1.binance.org:8545/")
 let starlight = web3Client.contractSender(StarLight, Address.fromHex startLightAddress)
 
-proc getTokenURI*(tokenId: int): string  = 
-  var data = waitFor starlight.tokenURI(tokenId.u256).call()
+proc getTokenURI*(address:string, tokenId: int): string  = 
+  let nft = web3Client.contractSender(StarLight, Address.fromHex address)
+  var data = waitFor nft.tokenURI(tokenId.u256).call()
   var length = strutils.fromHex[int](data[64 .. 127])
   result = data[128 .. 128 + length*2 - 1].parseHexStr
 
-proc getName*(): string  = 
-  var data = waitFor starlight.name().call()
+proc getName*(address:string): string  = 
+  let nft = web3Client.contractSender(StarLight, Address.fromHex address)
+  var data = waitFor nft.name().call()
   var length = strutils.fromHex[int](data[64 .. 127])
   result = data[128 .. 128 + length*2 - 1].parseHexStr
 
-proc getTotalSupply*(): UInt256  = 
-  result = waitFor starlight.totalSupply().call()
+proc getTotalSupply*(address:string): UInt256  = 
+  let nft = web3Client.contractSender(StarLight, Address.fromHex address)
+  result = waitFor nft.totalSupply().call()
 
-proc getOwner*(tokenId: int): string =
-  result = $(waitFor starlight.ownerOf(tokenId.u256).call())
+proc getOwner*(address:string, tokenId: int): string =
+  let nft = web3Client.contractSender(StarLight, Address.fromHex address)
+  result = $(waitFor nft.ownerOf(tokenId.u256).call())
   
 when isMainModule:
   # var account = Address.fromHex "0x657eEfd3e1712d152430bc3D35e9c40Db474e9b6"
   # var client = waitFor newWeb3("https://icy-weathered-violet.bsc.quiknode.pro/0617462be53bb10061e99025fa2cd12893fb6efb/")
   # var balance = waitFor client.provider.eth_getBalance(account, "latest")
   # echo balance
-  var ts = getTotalSupply().toInt()
+  var ts = getTotalSupply(startLightAddress).toInt()
   var owner = getOwner(0)
   var uri = getTokenURI(0)
   echo ts, owner, uri
