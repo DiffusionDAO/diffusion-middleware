@@ -10,7 +10,17 @@ import std/uri
 import puppy, re, os
 import asyncfile
 import asyncdispatch
+import tables
 
+const dfsNFT = {"0":"QmSAkwfQa4thS1cg1cFkULydT1P9aoquRKiv7KCuTYvqak",
+                "1":"Qmba4Q7reUoUXbkXRG8h8DSZ8wUdbm6CsXDHgkL8h6jr19",
+                "2":"QmRmH7Mk8mG6AhLTw3caaAfRk32BPVFci5peX9ukmmv9Ja",
+                "3":"QmQRPivxPhW6yk92wwe5nWbuPooT6WBz3pFtrQfMsxEd8a",
+                "4":"QmQn5dSDzq3jBcLek5R7HCqePnKApnr1Z3MoNreEP31vUs",
+                "5":"QmaPUTRNt9WT8H69z2fW89we7kudXDRFY7HrMG7PZRtghz",
+                "6":"QmW2cgHfp4TxUZBbTCNy6eM2VzxEpFE2NEbB8thB4mr9i7"}.toOrderedTable
+
+const dfsName = {"0":"Lord fragment","1":"Lord","2":"Gloden Lord","3":"General","4":"Gloden General","5":"Congressman","6":"Gloden Congressman"}.toOrderedTable
 
 proc getter() {.async.} = 
     while true:
@@ -46,16 +56,24 @@ proc getter() {.async.} =
                     var body = response.body()
                     writeFile(large, body)
 
-                for i in 0..totalSupply - 1:
-                    var path = &"public/nfts/{collection}/{i}"
-                    if not fileExists path:
+                var total = nft[collection]["total"].getInt
+                if total != totalSupply :
+                    for i in total..totalSupply - 1:
+                        var path = &"public/nfts/{collection}/{i}"
                         var owner = getOwner(collection, i)
-                        var tokenURI = getTokenURI(collection, i)
-                        var url = fmt"http://127.0.0.1:5001/api/v0/cat?arg={tokenURI}"
-                        var response = client.post(url)
-                        var body = response.body()
-                        writeFile(path, body)
-                        if nft[collection]["tokens"].len == i:
+                        var level: string
+                        if not fileExists path:
+                            var tokenURI = getTokenURI(collection, i)
+                            if tokenURI == $i:
+                                level = getItems(collection, i)
+                                tokenURI = dfsNFT[level]
+                                name = dfsName[level]
+                                echo name
+                            var url = fmt"http://127.0.0.1:5001/api/v0/cat?arg={tokenURI}"
+                            var response = client.post(url)
+                            var body = response.body()
+                            writeFile(path, body)
+                        if nft[collection]["tokens"].len < i:
                             nft[collection]["tokens"].add %*{"tokenId": $i,
                                                 "name": name,
                                                 "description": name,
@@ -68,7 +86,7 @@ proc getter() {.async.} =
                                                 "attributes": [
                                                     {
                                                         "traitType": "",
-                                                        "value": 0,
+                                                        "value": level,
                                                         "displayType": ""
                                                     }
                                                 ],
@@ -84,8 +102,6 @@ proc getter() {.async.} =
                                                     "currentSeller": owner,
                                                     "isTradable": true
                                                 }}
-                
-                if nft[collection]["total"].getInt != totalSupply :
                     nft[collection]["total"] = %totalSupply
                     nft[collection]["data"][0]["totalSupply"] = %totalSupply
                     writeFile("nft.json", $nft)
