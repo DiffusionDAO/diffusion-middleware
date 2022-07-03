@@ -12,13 +12,13 @@ import asyncfile
 import asyncdispatch
 import tables
 
-const dfsNFT = {"0":"QmSAkwfQa4thS1cg1cFkULydT1P9aoquRKiv7KCuTYvqak",
-                "1":"Qmba4Q7reUoUXbkXRG8h8DSZ8wUdbm6CsXDHgkL8h6jr19",
-                "2":"QmRmH7Mk8mG6AhLTw3caaAfRk32BPVFci5peX9ukmmv9Ja",
-                "3":"QmQRPivxPhW6yk92wwe5nWbuPooT6WBz3pFtrQfMsxEd8a",
-                "4":"QmQn5dSDzq3jBcLek5R7HCqePnKApnr1Z3MoNreEP31vUs",
-                "5":"QmaPUTRNt9WT8H69z2fW89we7kudXDRFY7HrMG7PZRtghz",
-                "6":"QmW2cgHfp4TxUZBbTCNy6eM2VzxEpFE2NEbB8thB4mr9i7"}.toOrderedTable
+const dfsNFT = {"0":"QmbQRKqW6DvZ5CEB5B5jQk4iCsFkBzCjwo316aJJkUn7CR",
+                "1":"QmTjm418fc4EC9dKn51JpwD5Krf9jciCBNTC94s9ZsnPaA",
+                "2":"QmXp68doo1udaESHf15btes95MAmHWkcJE6BS6gGPuurdE",
+                "3":"QmaQjNDQJAkJKdt7ZjgMY4dFkLpykEPTuhTJjKNJsj91nT",
+                "4":"QmS61LbSk5AHEi38z7PHXWWnqZdtbgEYPW4DeXN6QtTyLR",
+                "5":"Qma6WTrZMfs9pUvv44vhcP2Vrnau1FuSpLwiuwBFigLhdM",
+                "6":"QmTxwFXhfFxTtuMFBhbBoysHLjrbQ1f8WcdjViZWTN6qKr"}.toOrderedTable
 
 const dfsName = {"0":"Lord fragment","1":"Lord","2":"Gloden Lord","3":"General","4":"Gloden General","5":"Congressman","6":"Gloden Congressman"}.toOrderedTable
 
@@ -59,16 +59,20 @@ proc getter() {.async.} =
                 var total = nft[collection]["total"].getInt
                 if total != totalSupply :
                     for i in total..totalSupply - 1:
-                        var path = &"public/nfts/{collection}/{i}"
-                        var owner = getOwner(collection, i)
+                        var owner = getOwnerOf(collection, i)
+                        var tokens = nft[collection]["tokens"]
+                        for token in tokens.mitems:
+                            if token["marketData"]["currentSeller"].getStr != owner:
+                                token["marketData"]["currentSeller"] = %owner
+                                echo token
                         var level: string
+                        var path = &"public/nfts/{collection}/{i}"
                         if not fileExists path:
                             var tokenURI = getTokenURI(collection, i)
                             if tokenURI == $i:
                                 level = getItems(collection, i)
                                 tokenURI = dfsNFT[level]
                                 name = dfsName[level]
-                                echo name
                             var url = fmt"http://127.0.0.1:5001/api/v0/cat?arg={tokenURI}"
                             var response = client.post(url)
                             var body = response.body()

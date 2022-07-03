@@ -36,7 +36,7 @@ proc getTotalSupply*(address:string): UInt256  =
   let nft = web3Client.contractSender(StarLight, Address.fromHex address)
   result = waitFor nft.totalSupply().call()
 
-proc getOwner*(address:string, tokenId: int): string =
+proc getOwnerOf*(address:string, tokenId: int): string =
   let nft = web3Client.contractSender(StarLight, Address.fromHex address)
   result = $(waitFor nft.ownerOf(tokenId.u256).call())
   

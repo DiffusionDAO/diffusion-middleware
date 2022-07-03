@@ -472,16 +472,16 @@
             }
         ]
     },
-    "0x11C75500cfe0862e3Ef9F5061C297Ddc099F1116": {
-        "total": 60,
+    "0x6d004E30b48227a237cdabBd9c4e52D8d60BECfe": {
+        "total": 23,
         "data": [
             {
-                "address": "0x11C75500cfe0862e3Ef9F5061C297Ddc099F1116",
+                "address": "0x6d004E30b48227a237cdabBd9c4e52D8d60BECfe",
                 "owner": "0x0a24F5df83B3bAA3982aCe21D051F525F02c5dE1",
                 "name": "DFS",
                 "description": "DFS",
                 "symbol": "DFS",
-                "totalSupply": 60,
+                "totalSupply": 23,
                 "verified": true,
                 "createdAt": "2022-05-16T06:28:00.969Z",
                 "updatedAt": "2022-05-16T06:28:00.969Z",
@@ -498,7 +498,7 @@
                 "name": "Lord fragment",
                 "description": "Lord fragment",
                 "collectionName": "Lord fragment",
-                "collectionAddress": "0x11C75500cfe0862e3Ef9F5061C297Ddc099F1116",
+                "collectionAddress": "0x6d004E30b48227a237cdabBd9c4e52D8d60BECfe",
                 "image": {
                     "original": "string",
                     "thumbnail": "1"
@@ -510,8 +510,8 @@
                         "displayType": ""
                     }
                 ],
-                "createdAt": "2022/07/03 00:09",
-                "updatedAt": "2022/07/03 00:09",
+                "createdAt": "2022/07/03 09:00",
+                "updatedAt": "2022/07/03 09:00",
                 "location": "For Sale",
                 "marketData": {
                     "tokenId": "1",
@@ -519,7 +519,7 @@
                         "id": "1"
                     },
                     "currentAskPrice": "",
-                    "currentSeller": "0xade1a8e489aef40d2f36df947171dd90883fafc6",
+                    "currentSeller": "0x0a24f5df83b3baa3982ace21d051f525f02c5de1",
                     "isTradable": true
                 }
             },
@@ -528,7 +528,7 @@
                 "name": "Lord fragment",
                 "description": "Lord fragment",
                 "collectionName": "Lord fragment",
-                "collectionAddress": "0x11C75500cfe0862e3Ef9F5061C297Ddc099F1116",
+                "collectionAddress": "0x6d004E30b48227a237cdabBd9c4e52D8d60BECfe",
                 "image": {
                     "original": "string",
                     "thumbnail": "2"
@@ -540,8 +540,8 @@
                         "displayType": ""
                     }
                 ],
-                "createdAt": "2022/07/03 00:09",
-                "updatedAt": "2022/07/03 00:09",
+                "createdAt": "2022/07/03 09:00",
+                "updatedAt": "2022/07/03 09:00",
                 "location": "For Sale",
                 "marketData": {
                     "tokenId": "2",
@@ -549,7 +549,7 @@
                         "id": "2"
                     },
                     "currentAskPrice": "",
-                    "currentSeller": "0xade1a8e489aef40d2f36df947171dd90883fafc6",
+                    "currentSeller": "0x0a24f5df83b3baa3982ace21d051f525f02c5de1",
                     "isTradable": true
                 }
             },
@@ -558,7 +558,7 @@
                 "name": "Lord fragment",
                 "description": "Lord fragment",
                 "collectionName": "Lord fragment",
-                "collectionAddress": "0x11C75500cfe0862e3Ef9F5061C297Ddc099F1116",
+                "collectionAddress": "0x6d004E30b48227a237cdabBd9c4e52D8d60BECfe",
                 "image": {
                     "original": "string",
                     "thumbnail": "3"
@@ -570,8 +570,8 @@
                         "displayType": ""
                     }
                 ],
-                "createdAt": "2022/07/03 00:09",
-                "updatedAt": "2022/07/03 00:09",
+                "createdAt": "2022/07/03 09:00",
+                "updatedAt": "2022/07/03 09:00",
                 "location": "For Sale",
                 "marketData": {
                     "tokenId": "3",
@@ -579,7 +579,7 @@
                         "id": "3"
                     },
                     "currentAskPrice": "",
-                    "currentSeller": "0xade1a8e489aef40d2f36df947171dd90883fafc6",
+                    "currentSeller": "0x0a24f5df83b3baa3982ace21d051f525f02c5de1",
                     "isTradable": true
                 }
             },
@@ -588,7 +588,7 @@
                 "name": "Lord fragment",
                 "description": "Lord fragment",
                 "collectionName": "Lord fragment",
-                "collectionAddress": "0x11C75500cfe0862e3Ef9F5061C297Ddc099F1116",
+                "collectionAddress": "0x6d004E30b48227a237cdabBd9c4e52D8d60BECfe",
                 "image": {
                     "original": "string",
                     "thumbnail": "4"
@@ -600,8 +600,8 @@
                         "displayType": ""
                     }
                 ],
-                "createdAt": "2022/07/03 00:09",
-                "updatedAt": "2022/07/03 00:09",
+                "createdAt": "2022/07/03 09:00",
+                "updatedAt": "2022/07/03 09:00",
                 "location": "For Sale",
                 "marketData": {
                     "tokenId": "4",
@@ -609,7 +609,7 @@
                         "id": "4"
                     },
                     "currentAskPrice": "",
-                    "currentSeller": "0xade1a8e489aef40d2f36df947171dd90883fafc6",
+                    "currentSeller": "0x0a24f5df83b3baa3982ace21d051f525f02c5de1",
                     "isTradable": true
                 }
             },
@@ -618,7 +618,7 @@
                 "name": "Lord fragment",
                 "description": "Lord fragment",
                 "collectionName": "Lord fragment",
-                "collectionAddress": "0x11C75500cfe0862e3Ef9F5061C297Ddc099F1116",
+                "collectionAddress": "0x6d004E30b48227a237cdabBd9c4e52D8d60BECfe",
                 "image": {
                     "original": "string",
                     "thumbnail": "5"
@@ -630,8 +630,8 @@
                         "displayType": ""
                     }
                 ],
-                "createdAt": "2022/07/03 00:09",
-                "updatedAt": "2022/07/03 00:09",
+                "createdAt": "2022/07/03 09:00",
+                "updatedAt": "2022/07/03 09:00",
                 "location": "For Sale",
                 "marketData": {
                     "tokenId": "5",
@@ -639,7 +639,7 @@
                         "id": "5"
                     },
                     "currentAskPrice": "",
-                    "currentSeller": "0xade1a8e489aef40d2f36df947171dd90883fafc6",
+                    "currentSeller": "0x0a24f5df83b3baa3982ace21d051f525f02c5de1",
                     "isTradable": true
                 }
             },
@@ -648,7 +648,7 @@
                 "name": "Lord",
                 "description": "Lord",
                 "collectionName": "Lord",
-                "collectionAddress": "0x11C75500cfe0862e3Ef9F5061C297Ddc099F1116",
+                "collectionAddress": "0x6d004E30b48227a237cdabBd9c4e52D8d60BECfe",
                 "image": {
                     "original": "string",
                     "thumbnail": "6"
@@ -660,8 +660,8 @@
                         "displayType": ""
                     }
                 ],
-                "createdAt": "2022/07/03 00:09",
-                "updatedAt": "2022/07/03 00:09",
+                "createdAt": "2022/07/03 09:00",
+                "updatedAt": "2022/07/03 09:00",
                 "location": "For Sale",
                 "marketData": {
                     "tokenId": "6",
@@ -669,7 +669,7 @@
                         "id": "6"
                     },
                     "currentAskPrice": "",
-                    "currentSeller": "0xade1a8e489aef40d2f36df947171dd90883fafc6",
+                    "currentSeller": "0x0a24f5df83b3baa3982ace21d051f525f02c5de1",
                     "isTradable": true
                 }
             },
@@ -678,7 +678,7 @@
                 "name": "Lord",
                 "description": "Lord",
                 "collectionName": "Lord",
-                "collectionAddress": "0x11C75500cfe0862e3Ef9F5061C297Ddc099F1116",
+                "collectionAddress": "0x6d004E30b48227a237cdabBd9c4e52D8d60BECfe",
                 "image": {
                     "original": "string",
                     "thumbnail": "7"
@@ -690,8 +690,8 @@
                         "displayType": ""
                     }
                 ],
-                "createdAt": "2022/07/03 00:09",
-                "updatedAt": "2022/07/03 00:09",
+                "createdAt": "2022/07/03 09:00",
+                "updatedAt": "2022/07/03 09:00",
                 "location": "For Sale",
                 "marketData": {
                     "tokenId": "7",
@@ -699,7 +699,7 @@
                         "id": "7"
                     },
                     "currentAskPrice": "",
-                    "currentSeller": "0xade1a8e489aef40d2f36df947171dd90883fafc6",
+                    "currentSeller": "0x0a24f5df83b3baa3982ace21d051f525f02c5de1",
                     "isTradable": true
                 }
             },
@@ -708,7 +708,7 @@
                 "name": "Gloden Lord",
                 "description": "Gloden Lord",
                 "collectionName": "Gloden Lord",
-                "collectionAddress": "0x11C75500cfe0862e3Ef9F5061C297Ddc099F1116",
+                "collectionAddress": "0x6d004E30b48227a237cdabBd9c4e52D8d60BECfe",
                 "image": {
                     "original": "string",
                     "thumbnail": "8"
@@ -720,8 +720,8 @@
                         "displayType": ""
                     }
                 ],
-                "createdAt": "2022/07/03 00:09",
-                "updatedAt": "2022/07/03 00:09",
+                "createdAt": "2022/07/03 09:00",
+                "updatedAt": "2022/07/03 09:00",
                 "location": "For Sale",
                 "marketData": {
                     "tokenId": "8",
@@ -729,7 +729,7 @@
                         "id": "8"
                     },
                     "currentAskPrice": "",
-                    "currentSeller": "0xade1a8e489aef40d2f36df947171dd90883fafc6",
+                    "currentSeller": "0x0a24f5df83b3baa3982ace21d051f525f02c5de1",
                     "isTradable": true
                 }
             },
@@ -738,7 +738,7 @@
                 "name": "Gloden Lord",
                 "description": "Gloden Lord",
                 "collectionName": "Gloden Lord",
-                "collectionAddress": "0x11C75500cfe0862e3Ef9F5061C297Ddc099F1116",
+                "collectionAddress": "0x6d004E30b48227a237cdabBd9c4e52D8d60BECfe",
                 "image": {
                     "original": "string",
                     "thumbnail": "9"
@@ -750,8 +750,8 @@
                         "displayType": ""
                     }
                 ],
-                "createdAt": "2022/07/03 00:09",
-                "updatedAt": "2022/07/03 00:09",
+                "createdAt": "2022/07/03 09:00",
+                "updatedAt": "2022/07/03 09:00",
                 "location": "For Sale",
                 "marketData": {
                     "tokenId": "9",
@@ -759,7 +759,7 @@
                         "id": "9"
                     },
                     "currentAskPrice": "",
-                    "currentSeller": "0xade1a8e489aef40d2f36df947171dd90883fafc6",
+                    "currentSeller": "0x0a24f5df83b3baa3982ace21d051f525f02c5de1",
                     "isTradable": true
                 }
             },
@@ -768,7 +768,7 @@
                 "name": "General",
                 "description": "General",
                 "collectionName": "General",
-                "collectionAddress": "0x11C75500cfe0862e3Ef9F5061C297Ddc099F1116",
+                "collectionAddress": "0x6d004E30b48227a237cdabBd9c4e52D8d60BECfe",
                 "image": {
                     "original": "string",
                     "thumbnail": "10"
@@ -780,8 +780,8 @@
                         "displayType": ""
                     }
                 ],
-                "createdAt": "2022/07/03 00:09",
-                "updatedAt": "2022/07/03 00:09",
+                "createdAt": "2022/07/03 09:00",
+                "updatedAt": "2022/07/03 09:00",
                 "location": "For Sale",
                 "marketData": {
                     "tokenId": "10",
@@ -789,7 +789,7 @@
                         "id": "10"
                     },
                     "currentAskPrice": "",
-                    "currentSeller": "0xade1a8e489aef40d2f36df947171dd90883fafc6",
+                    "currentSeller": "0x0a24f5df83b3baa3982ace21d051f525f02c5de1",
                     "isTradable": true
                 }
             },
@@ -798,7 +798,7 @@
                 "name": "General",
                 "description": "General",
                 "collectionName": "General",
-                "collectionAddress": "0x11C75500cfe0862e3Ef9F5061C297Ddc099F1116",
+                "collectionAddress": "0x6d004E30b48227a237cdabBd9c4e52D8d60BECfe",
                 "image": {
                     "original": "string",
                     "thumbnail": "11"
@@ -810,8 +810,8 @@
                         "displayType": ""
                     }
                 ],
-                "createdAt": "2022/07/03 00:09",
-                "updatedAt": "2022/07/03 00:09",
+                "createdAt": "2022/07/03 09:00",
+                "updatedAt": "2022/07/03 09:00",
                 "location": "For Sale",
                 "marketData": {
                     "tokenId": "11",
@@ -819,7 +819,7 @@
                         "id": "11"
                     },
                     "currentAskPrice": "",
-                    "currentSeller": "0xade1a8e489aef40d2f36df947171dd90883fafc6",
+                    "currentSeller": "0x0a24f5df83b3baa3982ace21d051f525f02c5de1",
                     "isTradable": true
                 }
             },
@@ -828,7 +828,7 @@
                 "name": "Gloden General",
                 "description": "Gloden General",
                 "collectionName": "Gloden General",
-                "collectionAddress": "0x11C75500cfe0862e3Ef9F5061C297Ddc099F1116",
+                "collectionAddress": "0x6d004E30b48227a237cdabBd9c4e52D8d60BECfe",
                 "image": {
                     "original": "string",
                     "thumbnail": "12"
@@ -840,8 +840,8 @@
                         "displayType": ""
                     }
                 ],
-                "createdAt": "2022/07/03 00:09",
-                "updatedAt": "2022/07/03 00:09",
+                "createdAt": "2022/07/03 09:00",
+                "updatedAt": "2022/07/03 09:00",
                 "location": "For Sale",
                 "marketData": {
                     "tokenId": "12",
@@ -849,7 +849,7 @@
                         "id": "12"
                     },
                     "currentAskPrice": "",
-                    "currentSeller": "0xade1a8e489aef40d2f36df947171dd90883fafc6",
+                    "currentSeller": "0x0a24f5df83b3baa3982ace21d051f525f02c5de1",
                     "isTradable": true
                 }
             },
@@ -858,7 +858,7 @@
                 "name": "Gloden General",
                 "description": "Gloden General",
                 "collectionName": "Gloden General",
-                "collectionAddress": "0x11C75500cfe0862e3Ef9F5061C297Ddc099F1116",
+                "collectionAddress": "0x6d004E30b48227a237cdabBd9c4e52D8d60BECfe",
                 "image": {
                     "original": "string",
                     "thumbnail": "13"
@@ -870,8 +870,8 @@
                         "displayType": ""
                     }
                 ],
-                "createdAt": "2022/07/03 00:09",
-                "updatedAt": "2022/07/03 00:09",
+                "createdAt": "2022/07/03 09:00",
+                "updatedAt": "2022/07/03 09:00",
                 "location": "For Sale",
                 "marketData": {
                     "tokenId": "13",
@@ -879,7 +879,7 @@
                         "id": "13"
                     },
                     "currentAskPrice": "",
-                    "currentSeller": "0xade1a8e489aef40d2f36df947171dd90883fafc6",
+                    "currentSeller": "0x0a24f5df83b3baa3982ace21d051f525f02c5de1",
                     "isTradable": true
                 }
             },
@@ -888,7 +888,7 @@
                 "name": "Congressman",
                 "description": "Congressman",
                 "collectionName": "Congressman",
-                "collectionAddress": "0x11C75500cfe0862e3Ef9F5061C297Ddc099F1116",
+                "collectionAddress": "0x6d004E30b48227a237cdabBd9c4e52D8d60BECfe",
                 "image": {
                     "original": "string",
                     "thumbnail": "14"
@@ -900,8 +900,8 @@
                         "displayType": ""
                     }
                 ],
-                "createdAt": "2022/07/03 00:09",
-                "updatedAt": "2022/07/03 00:09",
+                "createdAt": "2022/07/03 09:00",
+                "updatedAt": "2022/07/03 09:00",
                 "location": "For Sale",
                 "marketData": {
                     "tokenId": "14",
@@ -909,7 +909,7 @@
                         "id": "14"
                     },
                     "currentAskPrice": "",
-                    "currentSeller": "0xade1a8e489aef40d2f36df947171dd90883fafc6",
+                    "currentSeller": "0x0a24f5df83b3baa3982ace21d051f525f02c5de1",
                     "isTradable": true
                 }
             },
@@ -918,7 +918,7 @@
                 "name": "Congressman",
                 "description": "Congressman",
                 "collectionName": "Congressman",
-                "collectionAddress": "0x11C75500cfe0862e3Ef9F5061C297Ddc099F1116",
+                "collectionAddress": "0x6d004E30b48227a237cdabBd9c4e52D8d60BECfe",
                 "image": {
                     "original": "string",
                     "thumbnail": "15"
@@ -930,8 +930,8 @@
                         "displayType": ""
                     }
                 ],
-                "createdAt": "2022/07/03 00:09",
-                "updatedAt": "2022/07/03 00:09",
+                "createdAt": "2022/07/03 09:00",
+                "updatedAt": "2022/07/03 09:00",
                 "location": "For Sale",
                 "marketData": {
                     "tokenId": "15",
@@ -939,7 +939,7 @@
                         "id": "15"
                     },
                     "currentAskPrice": "",
-                    "currentSeller": "0xade1a8e489aef40d2f36df947171dd90883fafc6",
+                    "currentSeller": "0x0a24f5df83b3baa3982ace21d051f525f02c5de1",
                     "isTradable": true
                 }
             },
@@ -948,7 +948,7 @@
                 "name": "Gloden Congressman",
                 "description": "Gloden Congressman",
                 "collectionName": "Gloden Congressman",
-                "collectionAddress": "0x11C75500cfe0862e3Ef9F5061C297Ddc099F1116",
+                "collectionAddress": "0x6d004E30b48227a237cdabBd9c4e52D8d60BECfe",
                 "image": {
                     "original": "string",
                     "thumbnail": "16"
@@ -960,8 +960,8 @@
                         "displayType": ""
                     }
                 ],
-                "createdAt": "2022/07/03 00:09",
-                "updatedAt": "2022/07/03 00:09",
+                "createdAt": "2022/07/03 09:00",
+                "updatedAt": "2022/07/03 09:00",
                 "location": "For Sale",
                 "marketData": {
                     "tokenId": "16",
@@ -978,7 +978,7 @@
                 "name": "Gloden Congressman",
                 "description": "Gloden Congressman",
                 "collectionName": "Gloden Congressman",
-                "collectionAddress": "0x11C75500cfe0862e3Ef9F5061C297Ddc099F1116",
+                "collectionAddress": "0x6d004E30b48227a237cdabBd9c4e52D8d60BECfe",
                 "image": {
                     "original": "string",
                     "thumbnail": "17"
@@ -990,8 +990,8 @@
                         "displayType": ""
                     }
                 ],
-                "createdAt": "2022/07/03 00:09",
-                "updatedAt": "2022/07/03 00:09",
+                "createdAt": "2022/07/03 09:00",
+                "updatedAt": "2022/07/03 09:00",
                 "location": "For Sale",
                 "marketData": {
                     "tokenId": "17",
@@ -1005,10 +1005,10 @@
             },
             {
                 "tokenId": "18",
-                "name": "Lord fragment",
-                "description": "Lord fragment",
-                "collectionName": "Lord fragment",
-                "collectionAddress": "0x11C75500cfe0862e3Ef9F5061C297Ddc099F1116",
+                "name": "Gloden Lord",
+                "description": "Gloden Lord",
+                "collectionName": "Gloden Lord",
+                "collectionAddress": "0x6d004E30b48227a237cdabBd9c4e52D8d60BECfe",
                 "image": {
                     "original": "string",
                     "thumbnail": "18"
@@ -1016,12 +1016,12 @@
                 "attributes": [
                     {
                         "traitType": "",
-                        "value": "0",
+                        "value": "2",
                         "displayType": ""
                     }
                 ],
-                "createdAt": "2022/07/03 00:09",
-                "updatedAt": "2022/07/03 00:09",
+                "createdAt": "2022/07/03 09:07",
+                "updatedAt": "2022/07/03 09:07",
                 "location": "For Sale",
                 "marketData": {
                     "tokenId": "18",
@@ -1029,7 +1029,7 @@
                         "id": "18"
                     },
                     "currentAskPrice": "",
-                    "currentSeller": "0x5d89d8ef68ea7b913534bb93edcdce732a81b12f",
+                    "currentSeller": "0x0a24f5df83b3baa3982ace21d051f525f02c5de1",
                     "isTradable": true
                 }
             },
@@ -1038,7 +1038,7 @@
                 "name": "Lord fragment",
                 "description": "Lord fragment",
                 "collectionName": "Lord fragment",
-                "collectionAddress": "0x11C75500cfe0862e3Ef9F5061C297Ddc099F1116",
+                "collectionAddress": "0x6d004E30b48227a237cdabBd9c4e52D8d60BECfe",
                 "image": {
                     "original": "string",
                     "thumbnail": "19"
@@ -1050,8 +1050,8 @@
                         "displayType": ""
                     }
                 ],
-                "createdAt": "2022/07/03 00:09",
-                "updatedAt": "2022/07/03 00:09",
+                "createdAt": "2022/07/03 09:11",
+                "updatedAt": "2022/07/03 09:11",
                 "location": "For Sale",
                 "marketData": {
                     "tokenId": "19",
@@ -1059,16 +1059,16 @@
                         "id": "19"
                     },
                     "currentAskPrice": "",
-                    "currentSeller": "0x5d89d8ef68ea7b913534bb93edcdce732a81b12f",
+                    "currentSeller": "0x0a24f5df83b3baa3982ace21d051f525f02c5de1",
                     "isTradable": true
                 }
             },
             {
                 "tokenId": "20",
-                "name": "Lord fragment",
-                "description": "Lord fragment",
-                "collectionName": "Lord fragment",
-                "collectionAddress": "0x11C75500cfe0862e3Ef9F5061C297Ddc099F1116",
+                "name": "General",
+                "description": "General",
+                "collectionName": "General",
+                "collectionAddress": "0x6d004E30b48227a237cdabBd9c4e52D8d60BECfe",
                 "image": {
                     "original": "string",
                     "thumbnail": "20"
@@ -1076,12 +1076,12 @@
                 "attributes": [
                     {
                         "traitType": "",
-                        "value": "0",
+                        "value": "3",
                         "displayType": ""
                     }
                 ],
-                "createdAt": "2022/07/03 00:09",
-                "updatedAt": "2022/07/03 00:09",
+                "createdAt": "2022/07/03 10:15",
+                "updatedAt": "2022/07/03 10:15",
                 "location": "For Sale",
                 "marketData": {
                     "tokenId": "20",
@@ -1089,16 +1089,16 @@
                         "id": "20"
                     },
                     "currentAskPrice": "",
-                    "currentSeller": "0x5d89d8ef68ea7b913534bb93edcdce732a81b12f",
+                    "currentSeller": "0x0a24f5df83b3baa3982ace21d051f525f02c5de1",
                     "isTradable": true
                 }
             },
             {
                 "tokenId": "21",
-                "name": "Lord fragment",
-                "description": "Lord fragment",
-                "collectionName": "Lord fragment",
-                "collectionAddress": "0x11C75500cfe0862e3Ef9F5061C297Ddc099F1116",
+                "name": "Gloden General",
+                "description": "Gloden General",
+                "collectionName": "Gloden General",
+                "collectionAddress": "0x6d004E30b48227a237cdabBd9c4e52D8d60BECfe",
                 "image": {
                     "original": "string",
                     "thumbnail": "21"
@@ -1106,12 +1106,12 @@
                 "attributes": [
                     {
                         "traitType": "",
-                        "value": "0",
+                        "value": "4",
                         "displayType": ""
                     }
                 ],
-                "createdAt": "2022/07/03 00:09",
-                "updatedAt": "2022/07/03 00:09",
+                "createdAt": "2022/07/03 10:27",
+                "updatedAt": "2022/07/03 10:27",
                 "location": "For Sale",
                 "marketData": {
                     "tokenId": "21",
@@ -1119,16 +1119,16 @@
                         "id": "21"
                     },
                     "currentAskPrice": "",
-                    "currentSeller": "0x5d89d8ef68ea7b913534bb93edcdce732a81b12f",
+                    "currentSeller": "0x0a24f5df83b3baa3982ace21d051f525f02c5de1",
                     "isTradable": true
                 }
             },
             {
                 "tokenId": "22",
-                "name": "Lord fragment",
-                "description": "Lord fragment",
-                "collectionName": "Lord fragment",
-                "collectionAddress": "0x11C75500cfe0862e3Ef9F5061C297Ddc099F1116",
+                "name": "Congressman",
+                "description": "Congressman",
+                "collectionName": "Congressman",
+                "collectionAddress": "0x6d004E30b48227a237cdabBd9c4e52D8d60BECfe",
                 "image": {
                     "original": "string",
                     "thumbnail": "22"
@@ -1136,1127 +1136,17 @@
                 "attributes": [
                     {
                         "traitType": "",
-                        "value": "0",
+                        "value": "5",
                         "displayType": ""
                     }
                 ],
-                "createdAt": "2022/07/03 00:09",
-                "updatedAt": "2022/07/03 00:09",
+                "createdAt": "2022/07/03 10:29",
+                "updatedAt": "2022/07/03 10:29",
                 "location": "For Sale",
                 "marketData": {
                     "tokenId": "22",
                     "collection": {
                         "id": "22"
-                    },
-                    "currentAskPrice": "",
-                    "currentSeller": "0x5d89d8ef68ea7b913534bb93edcdce732a81b12f",
-                    "isTradable": true
-                }
-            },
-            {
-                "tokenId": "23",
-                "name": "Lord fragment",
-                "description": "Lord fragment",
-                "collectionName": "Lord fragment",
-                "collectionAddress": "0x11C75500cfe0862e3Ef9F5061C297Ddc099F1116",
-                "image": {
-                    "original": "string",
-                    "thumbnail": "23"
-                },
-                "attributes": [
-                    {
-                        "traitType": "",
-                        "value": "0",
-                        "displayType": ""
-                    }
-                ],
-                "createdAt": "2022/07/03 00:09",
-                "updatedAt": "2022/07/03 00:09",
-                "location": "For Sale",
-                "marketData": {
-                    "tokenId": "23",
-                    "collection": {
-                        "id": "23"
-                    },
-                    "currentAskPrice": "",
-                    "currentSeller": "0x5d89d8ef68ea7b913534bb93edcdce732a81b12f",
-                    "isTradable": true
-                }
-            },
-            {
-                "tokenId": "24",
-                "name": "Lord",
-                "description": "Lord",
-                "collectionName": "Lord",
-                "collectionAddress": "0x11C75500cfe0862e3Ef9F5061C297Ddc099F1116",
-                "image": {
-                    "original": "string",
-                    "thumbnail": "24"
-                },
-                "attributes": [
-                    {
-                        "traitType": "",
-                        "value": "1",
-                        "displayType": ""
-                    }
-                ],
-                "createdAt": "2022/07/03 00:09",
-                "updatedAt": "2022/07/03 00:09",
-                "location": "For Sale",
-                "marketData": {
-                    "tokenId": "24",
-                    "collection": {
-                        "id": "24"
-                    },
-                    "currentAskPrice": "",
-                    "currentSeller": "0x5d89d8ef68ea7b913534bb93edcdce732a81b12f",
-                    "isTradable": true
-                }
-            },
-            {
-                "tokenId": "25",
-                "name": "Lord",
-                "description": "Lord",
-                "collectionName": "Lord",
-                "collectionAddress": "0x11C75500cfe0862e3Ef9F5061C297Ddc099F1116",
-                "image": {
-                    "original": "string",
-                    "thumbnail": "25"
-                },
-                "attributes": [
-                    {
-                        "traitType": "",
-                        "value": "1",
-                        "displayType": ""
-                    }
-                ],
-                "createdAt": "2022/07/03 00:09",
-                "updatedAt": "2022/07/03 00:09",
-                "location": "For Sale",
-                "marketData": {
-                    "tokenId": "25",
-                    "collection": {
-                        "id": "25"
-                    },
-                    "currentAskPrice": "",
-                    "currentSeller": "0x5d89d8ef68ea7b913534bb93edcdce732a81b12f",
-                    "isTradable": true
-                }
-            },
-            {
-                "tokenId": "26",
-                "name": "Gloden Lord",
-                "description": "Gloden Lord",
-                "collectionName": "Gloden Lord",
-                "collectionAddress": "0x11C75500cfe0862e3Ef9F5061C297Ddc099F1116",
-                "image": {
-                    "original": "string",
-                    "thumbnail": "26"
-                },
-                "attributes": [
-                    {
-                        "traitType": "",
-                        "value": "2",
-                        "displayType": ""
-                    }
-                ],
-                "createdAt": "2022/07/03 00:09",
-                "updatedAt": "2022/07/03 00:09",
-                "location": "For Sale",
-                "marketData": {
-                    "tokenId": "26",
-                    "collection": {
-                        "id": "26"
-                    },
-                    "currentAskPrice": "",
-                    "currentSeller": "0x5d89d8ef68ea7b913534bb93edcdce732a81b12f",
-                    "isTradable": true
-                }
-            },
-            {
-                "tokenId": "27",
-                "name": "Gloden Lord",
-                "description": "Gloden Lord",
-                "collectionName": "Gloden Lord",
-                "collectionAddress": "0x11C75500cfe0862e3Ef9F5061C297Ddc099F1116",
-                "image": {
-                    "original": "string",
-                    "thumbnail": "27"
-                },
-                "attributes": [
-                    {
-                        "traitType": "",
-                        "value": "2",
-                        "displayType": ""
-                    }
-                ],
-                "createdAt": "2022/07/03 00:09",
-                "updatedAt": "2022/07/03 00:09",
-                "location": "For Sale",
-                "marketData": {
-                    "tokenId": "27",
-                    "collection": {
-                        "id": "27"
-                    },
-                    "currentAskPrice": "",
-                    "currentSeller": "0x5d89d8ef68ea7b913534bb93edcdce732a81b12f",
-                    "isTradable": true
-                }
-            },
-            {
-                "tokenId": "28",
-                "name": "General",
-                "description": "General",
-                "collectionName": "General",
-                "collectionAddress": "0x11C75500cfe0862e3Ef9F5061C297Ddc099F1116",
-                "image": {
-                    "original": "string",
-                    "thumbnail": "28"
-                },
-                "attributes": [
-                    {
-                        "traitType": "",
-                        "value": "3",
-                        "displayType": ""
-                    }
-                ],
-                "createdAt": "2022/07/03 00:09",
-                "updatedAt": "2022/07/03 00:09",
-                "location": "For Sale",
-                "marketData": {
-                    "tokenId": "28",
-                    "collection": {
-                        "id": "28"
-                    },
-                    "currentAskPrice": "",
-                    "currentSeller": "0x5d89d8ef68ea7b913534bb93edcdce732a81b12f",
-                    "isTradable": true
-                }
-            },
-            {
-                "tokenId": "29",
-                "name": "General",
-                "description": "General",
-                "collectionName": "General",
-                "collectionAddress": "0x11C75500cfe0862e3Ef9F5061C297Ddc099F1116",
-                "image": {
-                    "original": "string",
-                    "thumbnail": "29"
-                },
-                "attributes": [
-                    {
-                        "traitType": "",
-                        "value": "3",
-                        "displayType": ""
-                    }
-                ],
-                "createdAt": "2022/07/03 00:09",
-                "updatedAt": "2022/07/03 00:09",
-                "location": "For Sale",
-                "marketData": {
-                    "tokenId": "29",
-                    "collection": {
-                        "id": "29"
-                    },
-                    "currentAskPrice": "",
-                    "currentSeller": "0x5d89d8ef68ea7b913534bb93edcdce732a81b12f",
-                    "isTradable": true
-                }
-            },
-            {
-                "tokenId": "30",
-                "name": "Gloden General",
-                "description": "Gloden General",
-                "collectionName": "Gloden General",
-                "collectionAddress": "0x11C75500cfe0862e3Ef9F5061C297Ddc099F1116",
-                "image": {
-                    "original": "string",
-                    "thumbnail": "30"
-                },
-                "attributes": [
-                    {
-                        "traitType": "",
-                        "value": "4",
-                        "displayType": ""
-                    }
-                ],
-                "createdAt": "2022/07/03 00:09",
-                "updatedAt": "2022/07/03 00:09",
-                "location": "For Sale",
-                "marketData": {
-                    "tokenId": "30",
-                    "collection": {
-                        "id": "30"
-                    },
-                    "currentAskPrice": "",
-                    "currentSeller": "0x5d89d8ef68ea7b913534bb93edcdce732a81b12f",
-                    "isTradable": true
-                }
-            },
-            {
-                "tokenId": "31",
-                "name": "Gloden General",
-                "description": "Gloden General",
-                "collectionName": "Gloden General",
-                "collectionAddress": "0x11C75500cfe0862e3Ef9F5061C297Ddc099F1116",
-                "image": {
-                    "original": "string",
-                    "thumbnail": "31"
-                },
-                "attributes": [
-                    {
-                        "traitType": "",
-                        "value": "4",
-                        "displayType": ""
-                    }
-                ],
-                "createdAt": "2022/07/03 00:09",
-                "updatedAt": "2022/07/03 00:09",
-                "location": "For Sale",
-                "marketData": {
-                    "tokenId": "31",
-                    "collection": {
-                        "id": "31"
-                    },
-                    "currentAskPrice": "",
-                    "currentSeller": "0x5d89d8ef68ea7b913534bb93edcdce732a81b12f",
-                    "isTradable": true
-                }
-            },
-            {
-                "tokenId": "32",
-                "name": "Congressman",
-                "description": "Congressman",
-                "collectionName": "Congressman",
-                "collectionAddress": "0x11C75500cfe0862e3Ef9F5061C297Ddc099F1116",
-                "image": {
-                    "original": "string",
-                    "thumbnail": "32"
-                },
-                "attributes": [
-                    {
-                        "traitType": "",
-                        "value": "5",
-                        "displayType": ""
-                    }
-                ],
-                "createdAt": "2022/07/03 00:09",
-                "updatedAt": "2022/07/03 00:09",
-                "location": "For Sale",
-                "marketData": {
-                    "tokenId": "32",
-                    "collection": {
-                        "id": "32"
-                    },
-                    "currentAskPrice": "",
-                    "currentSeller": "0x5d89d8ef68ea7b913534bb93edcdce732a81b12f",
-                    "isTradable": true
-                }
-            },
-            {
-                "tokenId": "33",
-                "name": "Congressman",
-                "description": "Congressman",
-                "collectionName": "Congressman",
-                "collectionAddress": "0x11C75500cfe0862e3Ef9F5061C297Ddc099F1116",
-                "image": {
-                    "original": "string",
-                    "thumbnail": "33"
-                },
-                "attributes": [
-                    {
-                        "traitType": "",
-                        "value": "5",
-                        "displayType": ""
-                    }
-                ],
-                "createdAt": "2022/07/03 00:09",
-                "updatedAt": "2022/07/03 00:09",
-                "location": "For Sale",
-                "marketData": {
-                    "tokenId": "33",
-                    "collection": {
-                        "id": "33"
-                    },
-                    "currentAskPrice": "",
-                    "currentSeller": "0x5d89d8ef68ea7b913534bb93edcdce732a81b12f",
-                    "isTradable": true
-                }
-            },
-            {
-                "tokenId": "34",
-                "name": "Gloden Congressman",
-                "description": "Gloden Congressman",
-                "collectionName": "Gloden Congressman",
-                "collectionAddress": "0x11C75500cfe0862e3Ef9F5061C297Ddc099F1116",
-                "image": {
-                    "original": "string",
-                    "thumbnail": "34"
-                },
-                "attributes": [
-                    {
-                        "traitType": "",
-                        "value": "6",
-                        "displayType": ""
-                    }
-                ],
-                "createdAt": "2022/07/03 00:09",
-                "updatedAt": "2022/07/03 00:09",
-                "location": "For Sale",
-                "marketData": {
-                    "tokenId": "34",
-                    "collection": {
-                        "id": "34"
-                    },
-                    "currentAskPrice": "",
-                    "currentSeller": "0x5d89d8ef68ea7b913534bb93edcdce732a81b12f",
-                    "isTradable": true
-                }
-            },
-            {
-                "tokenId": "35",
-                "name": "Gloden Congressman",
-                "description": "Gloden Congressman",
-                "collectionName": "Gloden Congressman",
-                "collectionAddress": "0x11C75500cfe0862e3Ef9F5061C297Ddc099F1116",
-                "image": {
-                    "original": "string",
-                    "thumbnail": "35"
-                },
-                "attributes": [
-                    {
-                        "traitType": "",
-                        "value": "6",
-                        "displayType": ""
-                    }
-                ],
-                "createdAt": "2022/07/03 00:09",
-                "updatedAt": "2022/07/03 00:09",
-                "location": "For Sale",
-                "marketData": {
-                    "tokenId": "35",
-                    "collection": {
-                        "id": "35"
-                    },
-                    "currentAskPrice": "",
-                    "currentSeller": "0x5d89d8ef68ea7b913534bb93edcdce732a81b12f",
-                    "isTradable": true
-                }
-            },
-            {
-                "tokenId": "36",
-                "name": "Lord",
-                "description": "Lord",
-                "collectionName": "Lord",
-                "collectionAddress": "0x11C75500cfe0862e3Ef9F5061C297Ddc099F1116",
-                "image": {
-                    "original": "string",
-                    "thumbnail": "36"
-                },
-                "attributes": [
-                    {
-                        "traitType": "",
-                        "value": "1",
-                        "displayType": ""
-                    }
-                ],
-                "createdAt": "2022/07/03 00:09",
-                "updatedAt": "2022/07/03 00:09",
-                "location": "For Sale",
-                "marketData": {
-                    "tokenId": "36",
-                    "collection": {
-                        "id": "36"
-                    },
-                    "currentAskPrice": "",
-                    "currentSeller": "0x0a24f5df83b3baa3982ace21d051f525f02c5de1",
-                    "isTradable": true
-                }
-            },
-            {
-                "tokenId": "37",
-                "name": "Gloden Lord",
-                "description": "Gloden Lord",
-                "collectionName": "Gloden Lord",
-                "collectionAddress": "0x11C75500cfe0862e3Ef9F5061C297Ddc099F1116",
-                "image": {
-                    "original": "string",
-                    "thumbnail": "37"
-                },
-                "attributes": [
-                    {
-                        "traitType": "",
-                        "value": "2",
-                        "displayType": ""
-                    }
-                ],
-                "createdAt": "2022/07/03 00:09",
-                "updatedAt": "2022/07/03 00:09",
-                "location": "For Sale",
-                "marketData": {
-                    "tokenId": "37",
-                    "collection": {
-                        "id": "37"
-                    },
-                    "currentAskPrice": "",
-                    "currentSeller": "0x0a24f5df83b3baa3982ace21d051f525f02c5de1",
-                    "isTradable": true
-                }
-            },
-            {
-                "tokenId": "38",
-                "name": "Gloden Congressman",
-                "description": "Gloden Congressman",
-                "collectionName": "Gloden Congressman",
-                "collectionAddress": "0x11C75500cfe0862e3Ef9F5061C297Ddc099F1116",
-                "image": {
-                    "original": "string",
-                    "thumbnail": "38"
-                },
-                "attributes": [
-                    {
-                        "traitType": "",
-                        "value": "6",
-                        "displayType": ""
-                    }
-                ],
-                "createdAt": "2022/07/03 00:09",
-                "updatedAt": "2022/07/03 00:09",
-                "location": "For Sale",
-                "marketData": {
-                    "tokenId": "38",
-                    "collection": {
-                        "id": "38"
-                    },
-                    "currentAskPrice": "",
-                    "currentSeller": "0x0a24f5df83b3baa3982ace21d051f525f02c5de1",
-                    "isTradable": true
-                }
-            },
-            {
-                "tokenId": "39",
-                "name": "General",
-                "description": "General",
-                "collectionName": "General",
-                "collectionAddress": "0x11C75500cfe0862e3Ef9F5061C297Ddc099F1116",
-                "image": {
-                    "original": "string",
-                    "thumbnail": "39"
-                },
-                "attributes": [
-                    {
-                        "traitType": "",
-                        "value": "3",
-                        "displayType": ""
-                    }
-                ],
-                "createdAt": "2022/07/03 00:09",
-                "updatedAt": "2022/07/03 00:09",
-                "location": "For Sale",
-                "marketData": {
-                    "tokenId": "39",
-                    "collection": {
-                        "id": "39"
-                    },
-                    "currentAskPrice": "",
-                    "currentSeller": "0x0a24f5df83b3baa3982ace21d051f525f02c5de1",
-                    "isTradable": true
-                }
-            },
-            {
-                "tokenId": "40",
-                "name": "Lord fragment",
-                "description": "Lord fragment",
-                "collectionName": "Lord fragment",
-                "collectionAddress": "0x11C75500cfe0862e3Ef9F5061C297Ddc099F1116",
-                "image": {
-                    "original": "string",
-                    "thumbnail": "40"
-                },
-                "attributes": [
-                    {
-                        "traitType": "",
-                        "value": "0",
-                        "displayType": ""
-                    }
-                ],
-                "createdAt": "2022/07/03 00:09",
-                "updatedAt": "2022/07/03 00:09",
-                "location": "For Sale",
-                "marketData": {
-                    "tokenId": "40",
-                    "collection": {
-                        "id": "40"
-                    },
-                    "currentAskPrice": "",
-                    "currentSeller": "0xb4c975af97dd4621f98ab0b6e6dd904da2aad9dc",
-                    "isTradable": true
-                }
-            },
-            {
-                "tokenId": "41",
-                "name": "Lord fragment",
-                "description": "Lord fragment",
-                "collectionName": "Lord fragment",
-                "collectionAddress": "0x11C75500cfe0862e3Ef9F5061C297Ddc099F1116",
-                "image": {
-                    "original": "string",
-                    "thumbnail": "41"
-                },
-                "attributes": [
-                    {
-                        "traitType": "",
-                        "value": "0",
-                        "displayType": ""
-                    }
-                ],
-                "createdAt": "2022/07/03 00:09",
-                "updatedAt": "2022/07/03 00:09",
-                "location": "For Sale",
-                "marketData": {
-                    "tokenId": "41",
-                    "collection": {
-                        "id": "41"
-                    },
-                    "currentAskPrice": "",
-                    "currentSeller": "0xb4c975af97dd4621f98ab0b6e6dd904da2aad9dc",
-                    "isTradable": true
-                }
-            },
-            {
-                "tokenId": "42",
-                "name": "Lord fragment",
-                "description": "Lord fragment",
-                "collectionName": "Lord fragment",
-                "collectionAddress": "0x11C75500cfe0862e3Ef9F5061C297Ddc099F1116",
-                "image": {
-                    "original": "string",
-                    "thumbnail": "42"
-                },
-                "attributes": [
-                    {
-                        "traitType": "",
-                        "value": "0",
-                        "displayType": ""
-                    }
-                ],
-                "createdAt": "2022/07/03 00:09",
-                "updatedAt": "2022/07/03 00:09",
-                "location": "For Sale",
-                "marketData": {
-                    "tokenId": "42",
-                    "collection": {
-                        "id": "42"
-                    },
-                    "currentAskPrice": "",
-                    "currentSeller": "0xb4c975af97dd4621f98ab0b6e6dd904da2aad9dc",
-                    "isTradable": true
-                }
-            },
-            {
-                "tokenId": "43",
-                "name": "Lord fragment",
-                "description": "Lord fragment",
-                "collectionName": "Lord fragment",
-                "collectionAddress": "0x11C75500cfe0862e3Ef9F5061C297Ddc099F1116",
-                "image": {
-                    "original": "string",
-                    "thumbnail": "43"
-                },
-                "attributes": [
-                    {
-                        "traitType": "",
-                        "value": "0",
-                        "displayType": ""
-                    }
-                ],
-                "createdAt": "2022/07/03 00:09",
-                "updatedAt": "2022/07/03 00:09",
-                "location": "For Sale",
-                "marketData": {
-                    "tokenId": "43",
-                    "collection": {
-                        "id": "43"
-                    },
-                    "currentAskPrice": "",
-                    "currentSeller": "0xb4c975af97dd4621f98ab0b6e6dd904da2aad9dc",
-                    "isTradable": true
-                }
-            },
-            {
-                "tokenId": "44",
-                "name": "Lord fragment",
-                "description": "Lord fragment",
-                "collectionName": "Lord fragment",
-                "collectionAddress": "0x11C75500cfe0862e3Ef9F5061C297Ddc099F1116",
-                "image": {
-                    "original": "string",
-                    "thumbnail": "44"
-                },
-                "attributes": [
-                    {
-                        "traitType": "",
-                        "value": "0",
-                        "displayType": ""
-                    }
-                ],
-                "createdAt": "2022/07/03 00:09",
-                "updatedAt": "2022/07/03 00:09",
-                "location": "For Sale",
-                "marketData": {
-                    "tokenId": "44",
-                    "collection": {
-                        "id": "44"
-                    },
-                    "currentAskPrice": "",
-                    "currentSeller": "0xb4c975af97dd4621f98ab0b6e6dd904da2aad9dc",
-                    "isTradable": true
-                }
-            },
-            {
-                "tokenId": "45",
-                "name": "Lord fragment",
-                "description": "Lord fragment",
-                "collectionName": "Lord fragment",
-                "collectionAddress": "0x11C75500cfe0862e3Ef9F5061C297Ddc099F1116",
-                "image": {
-                    "original": "string",
-                    "thumbnail": "45"
-                },
-                "attributes": [
-                    {
-                        "traitType": "",
-                        "value": "0",
-                        "displayType": ""
-                    }
-                ],
-                "createdAt": "2022/07/03 00:09",
-                "updatedAt": "2022/07/03 00:09",
-                "location": "For Sale",
-                "marketData": {
-                    "tokenId": "45",
-                    "collection": {
-                        "id": "45"
-                    },
-                    "currentAskPrice": "",
-                    "currentSeller": "0xb4c975af97dd4621f98ab0b6e6dd904da2aad9dc",
-                    "isTradable": true
-                }
-            },
-            {
-                "tokenId": "46",
-                "name": "Lord",
-                "description": "Lord",
-                "collectionName": "Lord",
-                "collectionAddress": "0x11C75500cfe0862e3Ef9F5061C297Ddc099F1116",
-                "image": {
-                    "original": "string",
-                    "thumbnail": "46"
-                },
-                "attributes": [
-                    {
-                        "traitType": "",
-                        "value": "1",
-                        "displayType": ""
-                    }
-                ],
-                "createdAt": "2022/07/03 00:09",
-                "updatedAt": "2022/07/03 00:09",
-                "location": "For Sale",
-                "marketData": {
-                    "tokenId": "46",
-                    "collection": {
-                        "id": "46"
-                    },
-                    "currentAskPrice": "",
-                    "currentSeller": "0xb4c975af97dd4621f98ab0b6e6dd904da2aad9dc",
-                    "isTradable": true
-                }
-            },
-            {
-                "tokenId": "47",
-                "name": "Lord",
-                "description": "Lord",
-                "collectionName": "Lord",
-                "collectionAddress": "0x11C75500cfe0862e3Ef9F5061C297Ddc099F1116",
-                "image": {
-                    "original": "string",
-                    "thumbnail": "47"
-                },
-                "attributes": [
-                    {
-                        "traitType": "",
-                        "value": "1",
-                        "displayType": ""
-                    }
-                ],
-                "createdAt": "2022/07/03 00:09",
-                "updatedAt": "2022/07/03 00:09",
-                "location": "For Sale",
-                "marketData": {
-                    "tokenId": "47",
-                    "collection": {
-                        "id": "47"
-                    },
-                    "currentAskPrice": "",
-                    "currentSeller": "0xb4c975af97dd4621f98ab0b6e6dd904da2aad9dc",
-                    "isTradable": true
-                }
-            },
-            {
-                "tokenId": "48",
-                "name": "Gloden Lord",
-                "description": "Gloden Lord",
-                "collectionName": "Gloden Lord",
-                "collectionAddress": "0x11C75500cfe0862e3Ef9F5061C297Ddc099F1116",
-                "image": {
-                    "original": "string",
-                    "thumbnail": "48"
-                },
-                "attributes": [
-                    {
-                        "traitType": "",
-                        "value": "2",
-                        "displayType": ""
-                    }
-                ],
-                "createdAt": "2022/07/03 00:09",
-                "updatedAt": "2022/07/03 00:09",
-                "location": "For Sale",
-                "marketData": {
-                    "tokenId": "48",
-                    "collection": {
-                        "id": "48"
-                    },
-                    "currentAskPrice": "",
-                    "currentSeller": "0xb4c975af97dd4621f98ab0b6e6dd904da2aad9dc",
-                    "isTradable": true
-                }
-            },
-            {
-                "tokenId": "49",
-                "name": "Gloden Lord",
-                "description": "Gloden Lord",
-                "collectionName": "Gloden Lord",
-                "collectionAddress": "0x11C75500cfe0862e3Ef9F5061C297Ddc099F1116",
-                "image": {
-                    "original": "string",
-                    "thumbnail": "49"
-                },
-                "attributes": [
-                    {
-                        "traitType": "",
-                        "value": "2",
-                        "displayType": ""
-                    }
-                ],
-                "createdAt": "2022/07/03 00:09",
-                "updatedAt": "2022/07/03 00:09",
-                "location": "For Sale",
-                "marketData": {
-                    "tokenId": "49",
-                    "collection": {
-                        "id": "49"
-                    },
-                    "currentAskPrice": "",
-                    "currentSeller": "0xb4c975af97dd4621f98ab0b6e6dd904da2aad9dc",
-                    "isTradable": true
-                }
-            },
-            {
-                "tokenId": "50",
-                "name": "General",
-                "description": "General",
-                "collectionName": "General",
-                "collectionAddress": "0x11C75500cfe0862e3Ef9F5061C297Ddc099F1116",
-                "image": {
-                    "original": "string",
-                    "thumbnail": "50"
-                },
-                "attributes": [
-                    {
-                        "traitType": "",
-                        "value": "3",
-                        "displayType": ""
-                    }
-                ],
-                "createdAt": "2022/07/03 00:09",
-                "updatedAt": "2022/07/03 00:09",
-                "location": "For Sale",
-                "marketData": {
-                    "tokenId": "50",
-                    "collection": {
-                        "id": "50"
-                    },
-                    "currentAskPrice": "",
-                    "currentSeller": "0xb4c975af97dd4621f98ab0b6e6dd904da2aad9dc",
-                    "isTradable": true
-                }
-            },
-            {
-                "tokenId": "51",
-                "name": "General",
-                "description": "General",
-                "collectionName": "General",
-                "collectionAddress": "0x11C75500cfe0862e3Ef9F5061C297Ddc099F1116",
-                "image": {
-                    "original": "string",
-                    "thumbnail": "51"
-                },
-                "attributes": [
-                    {
-                        "traitType": "",
-                        "value": "3",
-                        "displayType": ""
-                    }
-                ],
-                "createdAt": "2022/07/03 00:09",
-                "updatedAt": "2022/07/03 00:09",
-                "location": "For Sale",
-                "marketData": {
-                    "tokenId": "51",
-                    "collection": {
-                        "id": "51"
-                    },
-                    "currentAskPrice": "",
-                    "currentSeller": "0xb4c975af97dd4621f98ab0b6e6dd904da2aad9dc",
-                    "isTradable": true
-                }
-            },
-            {
-                "tokenId": "52",
-                "name": "Gloden General",
-                "description": "Gloden General",
-                "collectionName": "Gloden General",
-                "collectionAddress": "0x11C75500cfe0862e3Ef9F5061C297Ddc099F1116",
-                "image": {
-                    "original": "string",
-                    "thumbnail": "52"
-                },
-                "attributes": [
-                    {
-                        "traitType": "",
-                        "value": "4",
-                        "displayType": ""
-                    }
-                ],
-                "createdAt": "2022/07/03 00:09",
-                "updatedAt": "2022/07/03 00:09",
-                "location": "For Sale",
-                "marketData": {
-                    "tokenId": "52",
-                    "collection": {
-                        "id": "52"
-                    },
-                    "currentAskPrice": "",
-                    "currentSeller": "0xb4c975af97dd4621f98ab0b6e6dd904da2aad9dc",
-                    "isTradable": true
-                }
-            },
-            {
-                "tokenId": "53",
-                "name": "Gloden General",
-                "description": "Gloden General",
-                "collectionName": "Gloden General",
-                "collectionAddress": "0x11C75500cfe0862e3Ef9F5061C297Ddc099F1116",
-                "image": {
-                    "original": "string",
-                    "thumbnail": "53"
-                },
-                "attributes": [
-                    {
-                        "traitType": "",
-                        "value": "4",
-                        "displayType": ""
-                    }
-                ],
-                "createdAt": "2022/07/03 00:09",
-                "updatedAt": "2022/07/03 00:09",
-                "location": "For Sale",
-                "marketData": {
-                    "tokenId": "53",
-                    "collection": {
-                        "id": "53"
-                    },
-                    "currentAskPrice": "",
-                    "currentSeller": "0xb4c975af97dd4621f98ab0b6e6dd904da2aad9dc",
-                    "isTradable": true
-                }
-            },
-            {
-                "tokenId": "54",
-                "name": "Congressman",
-                "description": "Congressman",
-                "collectionName": "Congressman",
-                "collectionAddress": "0x11C75500cfe0862e3Ef9F5061C297Ddc099F1116",
-                "image": {
-                    "original": "string",
-                    "thumbnail": "54"
-                },
-                "attributes": [
-                    {
-                        "traitType": "",
-                        "value": "5",
-                        "displayType": ""
-                    }
-                ],
-                "createdAt": "2022/07/03 00:09",
-                "updatedAt": "2022/07/03 00:09",
-                "location": "For Sale",
-                "marketData": {
-                    "tokenId": "54",
-                    "collection": {
-                        "id": "54"
-                    },
-                    "currentAskPrice": "",
-                    "currentSeller": "0xb4c975af97dd4621f98ab0b6e6dd904da2aad9dc",
-                    "isTradable": true
-                }
-            },
-            {
-                "tokenId": "55",
-                "name": "Congressman",
-                "description": "Congressman",
-                "collectionName": "Congressman",
-                "collectionAddress": "0x11C75500cfe0862e3Ef9F5061C297Ddc099F1116",
-                "image": {
-                    "original": "string",
-                    "thumbnail": "55"
-                },
-                "attributes": [
-                    {
-                        "traitType": "",
-                        "value": "5",
-                        "displayType": ""
-                    }
-                ],
-                "createdAt": "2022/07/03 00:09",
-                "updatedAt": "2022/07/03 00:09",
-                "location": "For Sale",
-                "marketData": {
-                    "tokenId": "55",
-                    "collection": {
-                        "id": "55"
-                    },
-                    "currentAskPrice": "",
-                    "currentSeller": "0xb4c975af97dd4621f98ab0b6e6dd904da2aad9dc",
-                    "isTradable": true
-                }
-            },
-            {
-                "tokenId": "56",
-                "name": "Gloden Congressman",
-                "description": "Gloden Congressman",
-                "collectionName": "Gloden Congressman",
-                "collectionAddress": "0x11C75500cfe0862e3Ef9F5061C297Ddc099F1116",
-                "image": {
-                    "original": "string",
-                    "thumbnail": "56"
-                },
-                "attributes": [
-                    {
-                        "traitType": "",
-                        "value": "6",
-                        "displayType": ""
-                    }
-                ],
-                "createdAt": "2022/07/03 00:09",
-                "updatedAt": "2022/07/03 00:09",
-                "location": "For Sale",
-                "marketData": {
-                    "tokenId": "56",
-                    "collection": {
-                        "id": "56"
-                    },
-                    "currentAskPrice": "",
-                    "currentSeller": "0xb4c975af97dd4621f98ab0b6e6dd904da2aad9dc",
-                    "isTradable": true
-                }
-            },
-            {
-                "tokenId": "57",
-                "name": "Gloden Congressman",
-                "description": "Gloden Congressman",
-                "collectionName": "Gloden Congressman",
-                "collectionAddress": "0x11C75500cfe0862e3Ef9F5061C297Ddc099F1116",
-                "image": {
-                    "original": "string",
-                    "thumbnail": "57"
-                },
-                "attributes": [
-                    {
-                        "traitType": "",
-                        "value": "6",
-                        "displayType": ""
-                    }
-                ],
-                "createdAt": "2022/07/03 00:09",
-                "updatedAt": "2022/07/03 00:09",
-                "location": "For Sale",
-                "marketData": {
-                    "tokenId": "57",
-                    "collection": {
-                        "id": "57"
-                    },
-                    "currentAskPrice": "",
-                    "currentSeller": "0xb4c975af97dd4621f98ab0b6e6dd904da2aad9dc",
-                    "isTradable": true
-                }
-            },
-            {
-                "tokenId": "58",
-                "name": "Gloden General",
-                "description": "Gloden General",
-                "collectionName": "Gloden General",
-                "collectionAddress": "0x11C75500cfe0862e3Ef9F5061C297Ddc099F1116",
-                "image": {
-                    "original": "string",
-                    "thumbnail": "58"
-                },
-                "attributes": [
-                    {
-                        "traitType": "",
-                        "value": "4",
-                        "displayType": ""
-                    }
-                ],
-                "createdAt": "2022/07/03 00:09",
-                "updatedAt": "2022/07/03 00:09",
-                "location": "For Sale",
-                "marketData": {
-                    "tokenId": "58",
-                    "collection": {
-                        "id": "58"
-                    },
-                    "currentAskPrice": "",
-                    "currentSeller": "0x0a24f5df83b3baa3982ace21d051f525f02c5de1",
-                    "isTradable": true
-                }
-            },
-            {
-                "tokenId": "59",
-                "name": "Congressman",
-                "description": "Congressman",
-                "collectionName": "Congressman",
-                "collectionAddress": "0x11C75500cfe0862e3Ef9F5061C297Ddc099F1116",
-                "image": {
-                    "original": "string",
-                    "thumbnail": "59"
-                },
-                "attributes": [
-                    {
-                        "traitType": "",
-                        "value": "5",
-                        "displayType": ""
-                    }
-                ],
-                "createdAt": "2022/07/03 00:09",
-                "updatedAt": "2022/07/03 00:09",
-                "location": "For Sale",
-                "marketData": {
-                    "tokenId": "59",
-                    "collection": {
-                        "id": "59"
                     },
                     "currentAskPrice": "",
                     "currentSeller": "0x0a24f5df83b3baa3982ace21d051f525f02c5de1",
