@@ -20,7 +20,11 @@ const dfsNFT = {"0":"QmbQRKqW6DvZ5CEB5B5jQk4iCsFkBzCjwo316aJJkUn7CR",
                 "5":"Qma6WTrZMfs9pUvv44vhcP2Vrnau1FuSpLwiuwBFigLhdM",
                 "6":"QmTxwFXhfFxTtuMFBhbBoysHLjrbQ1f8WcdjViZWTN6qKr"}.toOrderedTable
 
-const dfsName = {"0":"Lord fragment","1":"Lord","2":"Gloden Lord","3":"General","4":"Gloden General","5":"Congressman","6":"Gloden Congressman"}.toOrderedTable
+const dfsName = {"0":"Lord fragment","1":"Lord","2":"Golden Lord","3":"General","4":"Golden General","5":"Congressman","6":"Golden Congressman"}.toOrderedTable
+
+template `[]=`(arr: JsonNode, i:int, j:JsonNode):untyped {.dirty.} =
+    var json = arr[i]
+
 
 proc getter() {.async.} = 
     while true:
@@ -36,7 +40,7 @@ proc getter() {.async.} =
                     echo "createDir: ", dir
                     createDir  dir
                 var totalSupply = getTotalSupply(collection).toInt()
-                echo "totalSupply:", totalSupply
+                # echo "totalSupply:", totalSupply
                 var data = data["data"][0]
                 var avatar = &"public/nfts/{collection}/avatar"
                 if not fileExists avatar:
@@ -55,62 +59,67 @@ proc getter() {.async.} =
                     var response = client.post(fmt"""http://127.0.0.1:5001/api/v0/cat?arg={data["banner"]["large"].getStr}""")
                     var body = response.body()
                     writeFile(large, body)
+                
+                var tokens = newJArray()
+                var total = nft[collection]["tokens"].len
+                for i in 0..totalSupply - 1:
+                    var tokenId = getTokenByIndex(collection, i)
+                    var owner = getOwnerOf(collection, tokenId)
 
-                var total = nft[collection]["total"].getInt
-                if total != totalSupply :
-                    for i in total..totalSupply - 1:
-                        var owner = getOwnerOf(collection, i)
-                        var tokens = nft[collection]["tokens"]
-                        for token in tokens.mitems:
-                            if token["marketData"]["currentSeller"].getStr != owner:
-                                token["marketData"]["currentSeller"] = %owner
-                                echo token
-                        var level: string
-                        var path = &"public/nfts/{collection}/{i}"
-                        if not fileExists path:
-                            var tokenURI = getTokenURI(collection, i)
-                            if tokenURI == $i:
-                                level = getItems(collection, i)
-                                tokenURI = dfsNFT[level]
-                                name = dfsName[level]
-                            var url = fmt"http://127.0.0.1:5001/api/v0/cat?arg={tokenURI}"
-                            var response = client.post(url)
-                            var body = response.body()
-                            writeFile(path, body)
-                        if nft[collection]["tokens"].len < i:
-                            nft[collection]["tokens"].add %*{"tokenId": $i,
-                                                "name": name,
-                                                "description": name,
-                                                "collectionName": name,
-                                                "collectionAddress": collection,
-                                                "image": {
-                                                    "original": "string",
-                                                    "thumbnail": $i
+                    var level: string
+                    var path = &"public/nfts/{collection}/{tokenId}"
+                    var tokenURI = getTokenURI(collection, tokenId)
+                    if tokenURI == $tokenId:
+                        level = getItems(collection, tokenId)
+                        tokenURI = dfsNFT[level]
+                        name = dfsName[level]
+                    if not fileExists path:
+                        var url = fmt"http://127.0.0.1:5001/api/v0/cat?arg={tokenURI}"
+                        var response = client.post(url)
+                        var body = response.body()
+                        writeFile(path, body)
+                    # if nft[collection]["tokens"][i]["createdAt"].getStr != "":
+                    #     time = nft[collection]["tokens"][i]["createdAt"].getStr
+                    tokens.add %*{"tokenId": $tokenId,
+                                            "name": name,
+                                            "description": name,
+                                            "collectionName": name,
+                                            "collectionAddress": collection,
+                                            "image": {
+                                                "original": "string",
+                                                "thumbnail": $tokenId
+                                            },
+                                            "attributes": [
+                                                {
+                                                    "traitType": "",
+                                                    "value": level,
+                                                    "displayType": ""
+                                                }
+                                            ],
+                                            "createdAt": time,
+                                            "updatedAt": time,
+                                            "location": "For Sale",
+                                            "marketData": {
+                                                "tokenId": $tokenId,
+                                                "collection": {
+                                                    "id": $tokenId
                                                 },
-                                                "attributes": [
-                                                    {
-                                                        "traitType": "",
-                                                        "value": level,
-                                                        "displayType": ""
-                                                    }
-                                                ],
-                                                "createdAt": time,
-                                                "updatedAt": time,
-                                                "location": "For Sale",
-                                                "marketData": {
-                                                    "tokenId": $i,
-                                                    "collection": {
-                                                        "id": $i
-                                                    },
-                                                    "currentAskPrice": "",
-                                                    "currentSeller": owner,
-                                                    "isTradable": true
-                                                }}
-                    nft[collection]["total"] = %totalSupply
-                    nft[collection]["data"][0]["totalSupply"] = %totalSupply
-                    writeFile("nft.json", $nft)
+                                                "currentAskPrice": "",
+                                                "currentSeller": owner,
+                                                "isTradable": true
+                                            }}
+                    # var token = nft[collection]["tokens"][i]
+                    # if token["marketData"]["currentSeller"].getStr != owner:
+                    #     token["marketData"]["currentSeller"] = %owner
+                    # if level != "" and token["attributes"][0]["value"].getStr != level:
+                    #     var attributes = token["attributes"][0]
+                    #     attributes["value"] = %level
+                nft[collection]["tokens"] = tokens
+                nft[collection]["total"] = %totalSupply
+                nft[collection]["data"][0]["totalSupply"] = %totalSupply
+                writeFile("nft.json", $nft)
             client.close()
-            sleep(1000)
+            sleep(500)
         except:
             echo getCurrentExceptionMsg()
 
