@@ -21,10 +21,10 @@ const dfsNFT = {"0":"QmbQRKqW6DvZ5CEB5B5jQk4iCsFkBzCjwo316aJJkUn7CR",
                 "6":"QmTxwFXhfFxTtuMFBhbBoysHLjrbQ1f8WcdjViZWTN6qKr"}.toOrderedTable
 
 const dfsName = {"0":"Lord fragment","1":"Lord","2":"Golden Lord","3":"General","4":"Golden General","5":"Congressman","6":"Golden Congressman"}.toOrderedTable
+const greeceNumber = {"0":"I","1":"II","2":"III","3":"IV","4":"V","5":"VI","6":"VII"}.toOrderedTable
 
 template `[]=`(arr: JsonNode, i:int, j:JsonNode):untyped {.dirty.} =
     var json = arr[i]
-
 
 proc getter() {.async.} = 
     while true:
@@ -62,12 +62,12 @@ proc getter() {.async.} =
                 
                 var tokens = newJArray()
                 var total = nft[collection]["tokens"].len
+                # var tokenIds = nft[collection]["tokens"].toSeq.mapIt(it["tokenId"].getInt)
+                var marketItems = getMarketItems()
                 for i in 0..totalSupply - 1:
                     var tokenId = getTokenByIndex(collection, i)
-                    var owner = getOwnerOf(collection, tokenId)
-
-                    var level: string
                     var path = &"public/nfts/{collection}/{tokenId}"
+                    var level: string
                     var tokenURI = getTokenURI(collection, tokenId)
                     if tokenURI == $tokenId:
                         level = getItems(collection, tokenId)
@@ -78,42 +78,41 @@ proc getter() {.async.} =
                         var response = client.post(url)
                         var body = response.body()
                         writeFile(path, body)
-                    # if nft[collection]["tokens"][i]["createdAt"].getStr != "":
-                    #     time = nft[collection]["tokens"][i]["createdAt"].getStr
-                    tokens.add %*{"tokenId": $tokenId,
-                                            "name": name,
-                                            "description": name,
-                                            "collectionName": name,
-                                            "collectionAddress": collection,
-                                            "image": {
-                                                "original": "string",
-                                                "thumbnail": $tokenId
+                    var owner = getOwnerOf(collection, tokenId)
+
+                    var token = %*{"tokenId": $tokenId,
+                                        "name": name,
+                                        "description": name,
+                                        "collectionName": name,
+                                        "collectionAddress": collection,
+                                        "image": {
+                                            "original": "string",
+                                            "thumbnail": $tokenId
+                                        },
+                                        "attributes": [
+                                            {
+                                                "traitType": "",
+                                                "value": level,
+                                                "displayType": ""
+                                            }
+                                        ],
+                                        "createdAt": time,
+                                        "updatedAt": time,
+                                        "location": "For Sale",
+                                        "marketData": {
+                                            "tokenId": $tokenId,
+                                            "collection": {
+                                                "id": $tokenId
                                             },
-                                            "attributes": [
-                                                {
-                                                    "traitType": "",
-                                                    "value": level,
-                                                    "displayType": ""
-                                                }
-                                            ],
-                                            "createdAt": time,
-                                            "updatedAt": time,
-                                            "location": "For Sale",
-                                            "marketData": {
-                                                "tokenId": $tokenId,
-                                                "collection": {
-                                                    "id": $tokenId
-                                                },
-                                                "currentAskPrice": "",
-                                                "currentSeller": owner,
-                                                "isTradable": true
-                                            }}
-                    # var token = nft[collection]["tokens"][i]
-                    # if token["marketData"]["currentSeller"].getStr != owner:
-                    #     token["marketData"]["currentSeller"] = %owner
-                    # if level != "" and token["attributes"][0]["value"].getStr != level:
-                    #     var attributes = token["attributes"][0]
-                    #     attributes["value"] = %level
+                                            "currentAskPrice": "",
+                                            "currentSeller": owner,
+                                            "isTradable": true
+                                        }}
+                    for item in marketItems:
+                        if item.tokenId.toInt() == tokenId:
+                            token["marketData"]["currentAskPrice"] = %item.price.toString()
+                            break
+                    tokens.add token
                 nft[collection]["tokens"] = tokens
                 nft[collection]["total"] = %totalSupply
                 nft[collection]["data"][0]["totalSupply"] = %totalSupply

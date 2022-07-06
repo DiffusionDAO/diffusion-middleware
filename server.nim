@@ -20,12 +20,13 @@ const host = "https://middle.diffusiondao.org"
 routes:
   get "/api/v0/dashboard":
     let number = getFollowerNumber()
+    echo "followers:",number
     var code = 200
     if number.twitter == 0 or number.discord == 0 or
         number.telegram == 0 or number.medium == 0:
       code = 401
     let data = $(%*{"code": code, "concentration": number})
-    resp data
+    resp Http200, {"Access-Control-Allow-Origin":"*"}, data
     
   get "/nfts/collections":
     {.gcsafe.}:
@@ -41,11 +42,18 @@ routes:
       resp Http200, {"Access-Control-Allow-Origin":"*"}, $nft
 
   get "/nfts/collections/@address/tokens/@tokenId":
+    {.gcsafe.}:
         var address = @"address"
-        var tokenId = parseInt @"tokenId"
+        var tokenId = @"tokenId"
         echo address, " ", tokenId
         var nfts = parseFile("nft.json")
-        var token = nfts[address]["tokens"][tokenId]
+
+        var token : JsonNode
+        for t in nfts[address]["tokens"]:
+          if t["tokenId"].getStr == tokenId:
+            token = t
+            break
+
         token["image"]["thumbnail"] = % &"{host}/nfts/{address}/{tokenId}"
         resp Http200, {"Access-Control-Allow-Origin":"*"}, $token
 
@@ -62,5 +70,13 @@ routes:
             var thumbnail = item["image"]["thumbnail"].getStr
             item["image"]["thumbnail"] = % &"{host}/nfts/{address}/{thumbnail}"
         resp Http200, {"Access-Control-Allow-Origin":"*"}, $nft
+
+  # patch "/nfts/collections/@address":
+  #   var address = @"address"
+  #   var newNft = parseJson request.body
+  #   var nft = parseFile("nft.json")
+  #   nft[address] = newNft
+  #   writeFile("nft.json", $nft)
+  #   resp Http200, {"Access-Control-Allow-Origin":"*"}, $nft
 
 runForever()
