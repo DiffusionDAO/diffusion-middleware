@@ -30,10 +30,11 @@ type MarketItem* = object
 
 contract(NFTMarket):
   proc fetchMarketItems():seq[MarketItem] {.view.}
-  
+
+const zeroAddress* = "0x0000000000000000000000000000000000000000"  
 const marketAddress* = "0xc96729d613Bd2F201CC387678Cf3D08eE53184e2"
 const startLightAddress* = "0x88eBFd7841D131BCeab3e7149217aa8e36985a40"
-const dfsNFTAddress* = "0x11C75500cfe0862e3Ef9F5061C297Ddc099F1116"
+const dfsNFTAddress* = "0x5d91BCC038142cBD7a972A74305Fcd8A6a8A1dC2"
 var web3Client = waitFor newWeb3("https://data-seed-prebsc-1-s1.binance.org:8545/")
 let starlight = web3Client.contractSender(StarLight, Address.fromHex startLightAddress)
 

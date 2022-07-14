@@ -26,6 +26,7 @@ const greeceNumber = {"0":"I","1":"II","2":"III","3":"IV","4":"V","5":"VI","6":"
 template `[]=`(arr: JsonNode, i:int, j:JsonNode):untyped {.dirty.} =
     var json = arr[i]
 
+
 proc getter() {.async.} = 
     while true:
         try:
@@ -81,44 +82,58 @@ proc getter() {.async.} =
                     var owner = getOwnerOf(collection, tokenId)
 
                     var token = %*{"tokenId": $tokenId,
-                                        "name": name,
-                                        "description": name,
-                                        "collectionName": name,
-                                        "collectionAddress": collection,
-                                        "image": {
-                                            "original": "string",
-                                            "thumbnail": $tokenId
+                                    "name": if collection == dfsNFTAddress: greeceNumber[level] else: name,
+                                    "description": name,
+                                    "collectionName": name,
+                                    "collectionAddress": collection,
+                                    "image": {
+                                        "original": "string",
+                                        "thumbnail": $tokenId
+                                    },
+                                    "attributes": [
+                                        {
+                                            "traitType": "",
+                                            "value": level,
+                                            "displayType": ""
+                                        }
+                                    ],
+                                    "createdAt": "",
+                                    "updatedAt": "",
+                                    "location": "For Sale",
+                                    "marketData": {
+                                        "tokenId": $tokenId,
+                                        "collection": {
+                                            "id": $tokenId
                                         },
-                                        "attributes": [
-                                            {
-                                                "traitType": "",
-                                                "value": level,
-                                                "displayType": ""
-                                            }
-                                        ],
-                                        "createdAt": time,
-                                        "updatedAt": time,
-                                        "location": "For Sale",
-                                        "marketData": {
-                                            "tokenId": $tokenId,
-                                            "collection": {
-                                                "id": $tokenId
-                                            },
-                                            "currentAskPrice": "",
-                                            "currentSeller": owner,
-                                            "isTradable": true
-                                        }}
+                                        "currentAskPrice": "",
+                                        "currentSeller": owner,
+                                        "isTradable": true
+                                    }}
                     for item in marketItems:
                         if item.tokenId.toInt() == tokenId:
                             token["marketData"]["currentAskPrice"] = %item.price.toString()
+                            if $item.seller != zeroAddress:
+                                token["marketData"]["currentSeller"] = % $item.seller
+                            break
+                    for t in nft[collection]["tokens"]:
+                        if t["tokenId"].getStr == $tokenId:
+                            if t["createdAt"].getStr == "" :
+                                token["createdAt"] = %time
+                            else:
+                                token["createdAt"] = t["createdAt"]
+                            if t["updatedAt"].getStr == "":
+                                token["updatedAt"] = %time
+                            else:
+                                token["updatedAt"] = t["updatedAt"]
                             break
                     tokens.add token
-                nft[collection]["tokens"] = tokens
-                nft[collection]["total"] = %totalSupply
-                nft[collection]["data"][0]["totalSupply"] = %totalSupply
-                writeFile("nft.json", $nft)
+                if nft[collection]["tokens"] != tokens:
+                    nft[collection]["tokens"] = tokens
+                    nft[collection]["total"] = %totalSupply
+                    nft[collection]["data"][0]["totalSupply"] = %totalSupply
+                    writeFile("nft.json", $nft)
             client.close()
-            sleep(500)
+            sleep(1000)
         except:
             echo getCurrentExceptionMsg()
 
